@@ -3,7 +3,100 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
 #index {
+	width: 90%;
+	max-width: 1200px;
+	padding-top: 40px;
+	padding-bottom: 80px;
+	margin:auto;
+
+	.description {
+		border-top: 1px solid #4CAFAC;
+		padding-top: 15px;
+		vertical-align: top;
+		display: inline-block;
+		text-align: left;
+		color: #777;
+		line-height: 30px;
+		padding-bottom: 15px;
+		font-size: 20px;
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+
+		.signature {
+			font-style: italic;
+		}
+	}
+
+	.image_outer_box {
+		display: inline-block;
+		padding: 15px;
+		border: 1px solid #4CAFAC;
+	}
+
+	.image_box {
+		background: #4CAFAC;
+		padding: 25px;
+	}
+
+	#introduction {
+		margin-left: auto;
+		margin-right: auto;
+
+		.description {
+			width: 65%;
+		}
+
+		.image_outer_box {
+			width: 25%;
+			margin-right: 4%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	#information {
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		.description {
+			display: inline-block;
+			width: 45%;
+		}
+
+		.image_outer_box {
+			display: inline-block;
+			width: 45%;
+			margin-left: 5%;
+			word-spacing: 40px;
+		}
+
+		img {
+			display: inline-block;
+		}
+	}
+
+	#article {
+
+		.description {
+			width: 72%;
+			display: inline-block;
+		}
+
+		img {
+			margin-right: 5%;
+			width: 20%;
+		}
+	}
+}
+
+
+#experience {
 	width: 90%;
 	max-width: 1200px;
 	padding-top: 40px;
