@@ -8,6 +8,7 @@ Bendit::Application.routes.draw do
   get 'main/about'
   get 'main/index'
   get 'main/experience'
+  get 'main/products'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
