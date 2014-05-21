@@ -146,24 +146,91 @@
 		margin:0;
 	}
 
-	h2 {
-		background: #ddd;
-		color: #3B93A3;
-		margin-top: 40px;
-		padding: 15px 25px;
-		font-family: 'Lato',sans-serif;
-		text-transform: uppercase;
+	.item-row {
+		margin: 30px 0;
+		width: 100%;
+		text-align: center;
+	}
 
-		span {
-			float: right;
+	.course-item {
+		vertical-align: top;
+		background: #ddd;
+		width: 18%;
+		box-sizing: border-box;
+		padding: 20px;
+		height: 200px;
+		margin: 0 15px;
+		display: inline-block;
+		-webkit-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+		cursor: pointer;
+		
+
+		p {
+			margin:0;
+			line-height: 32px;
+			font-size: 20px;	
+			color: #3B93A3;
+			font-family: 'Lato',sans-serif;
+			font-weight: 900;
+			text-transform: uppercase;	
 		}
 	}
 
-	p {
-		font-size: 18px;
-		font-family: 'Lato', sans-serif;
-		line-height: 28px;
-		color: #3B93A3;
+	.selected {
+		vertical-align: top;
+		width: 18%;
+		box-sizing: border-box;
+		padding: 20px;
+		height: 200px;
+		margin: 0 15px;
+		display: inline-block;
+		background: #3B93A3;
+		cursor: pointer;
+		-webkit-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+
+		p {
+			margin:0;
+			line-height: 32px;
+			font-size: 20px;	
+			color: #fff;
+			font-family: 'Lato',sans-serif;
+			font-weight: 900;
+			text-transform: uppercase;	
+		}
+	}
+
+	.not-selected {
+		opacity: .3;
+	}
+
+	.info-box {
+		width: 100%;
+		height: 250px;
+		box-sizing: border-box;
+		padding:30px;
+		background: #ddd;
+		position: relative;
+
+		p {
+			position: absolute;
+			opacity: 0;
+			top:15px;
+			left: 30px;
+			font-size: 18px;
+			line-height: 30px;
+			color: #3B93A3;
+			font-family: 'Lato', sans-serif;
+			-webkit-transition: all .25s ease-in-out;
+			-moz-transition: all .25s ease-in-out;
+			-o-transition: all .25s ease-in-out;
+			transition: all .25s ease-in-out;
+		}
 	}
 }
 
@@ -390,7 +457,6 @@
 		padding: 60px 0;
 		display: block;
 		text-align: center;
-		border-right: 3px solid #3B93A3;
 
 		img {
 			padding: 25px;

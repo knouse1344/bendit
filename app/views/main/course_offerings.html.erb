@@ -1,11 +1,106 @@
 <div id="course_offerings">
 	<div class="outer"><h1>Course Offerings</h1></div>
-	<h2>Smarten up and sharpen up!<span><img src='/assets/tooth.jpg' />Half Day</h2>
-	<p>
-		This informal and interactive workshop highlights some of the latest and greatest guides, aids, and automated sharpeners that can help one achieve sharp cutting edges on scalers and curettes. Participants will receive a sense of confidence, a new perspective and attitude toward sharpening, and the skills to accomplish the task quickly and easily.
-	</p>
-	<h2>The Heart and soul of ultrasonics<span><img src='/assets/tooth.jpg' />Half Day</h2>
-	<p>
-		This workshop provides the opportunity for each participant to analyze and utilize a variety of ultrasonic inserts on typodonts and truly get to the “Heart” of Ultrasonic scaling. In this workshop, we will focus on equipment, specific inserts, as well as technique.
-	</p>
+	<div class="item-row">
+		<div class="course-item sharpen-up"><p>Smarten up and sharpen up!</p></div>
+		<div class="course-item ultrasonics-box"><p>The Heart and soul of ultrasonics</p></div>
+		<div class="course-item ergonomic"><p>Positioning for life: Ergonomic Advancements in Dentistry</p></div>
+		<div class="course-item clinical"><p>Jazz up your clinical routine*</p></div>
+	</div>
+	<div class="item-row">
+		<div class="course-item choose-wisely"><p>Choose success by choosing wisely*</p></div>
+		<div class="course-item otc"><p>The myths, legends, and realities of OTC products</p></div>
+		<div class="course-item caries"><p>The 4 C's in solving the caries puzzle</p></div>
+	</div>
+	<div class="info-box">
+		<p class="info-text sharpen-text">
+			This informal and interactive workshop highlights some of the latest and greatest guides, aids, and automated sharpeners that can help one achieve sharp cutting edges on scalers and curettes. Participants will receive a sense of confidence, a new perspective and attitude toward sharpening, and the skills to accomplish the task quickly and easily.
+		</p>
+		<p class="info-text ultrasonics-text">
+			This workshop provides the opportunity for each participant to analyze and utilize a variety of ultrasonic inserts on typodonts and truly get to the “Heart” of Ultrasonic scaling. In this workshop, we will focus on equipment, specific inserts, as well as technique.
+		</p>
+		<p class="info-text ergonomics-text">
+			This course is designed for the dentist and dental hygienist to help the clinician become comfortable with recent advancements in instrument designs and practical techniques to reduce occupational injury. We will discuss appropriate chair-side products, their design and usage, and how these can reduce the risk of occupational injury.
+		</p>
+		<p class="info-text clinical-text">
+			In this course, participants will experience a true “hands-on” approach to instrument design evaluation. Each participant gets the unique opportunity to examine the newest instruments designed specifically for the contemporary practitioner. This will provide the confidence, knowledge, and experience to aid them when deciding if they have “what it takes” to provide the best care for their patients.
+		</p>
+		<p class="info-text choose-wisely-text">
+			Selection of instruments reflects upon each clinician’s level of experience, confidence, clinical knowledge and, most importantly, the decisions the instruction they received in school. Each participant will be encouraged to personally identify the hygiene instruments they find to be most comfortable, and will enable them to achieve successful outcomes in their individual clinical environment.
+		</p>
+		<p class="info-text otc-text">
+			This fun and interactive program explores the myths, legends and realities of personal dental products. We look at vintage commercials and then discuss how they have shaped current ideals and why getting the right products into the hands of our patients is such a challenge. This course will leave you questioning many of the advertisements and provide you with solutions, as well as, options to make wiser decisions for yourself and your patients.
+		</p>
+		<p class="info-text caries-text">
+			This program introduces a suggested “caries risk assessment” survey to identify individual patient risk level for dental caries. Mapping a treatment plan is only successful when the dental team  understands all factors that influence the caries pattern and prevalence based on medical history,  lifestyle changes, behaviors and disease factors.<br><br>The program will preview several case studies that begin with CAMBRA and design a mapping to incorporate appropriate therapies and patient-applied practices to reverse early carious patterns. In the final segment of this seminar, the participants will all be encouraged to share their successes with all the latest remineralization products and how they plan to improve their day-to-day practice using evidence-based science. This half day program is totally sponsored by Premier.
+		</p>
+	</div>
 </div>
+
+<script type="text/javascript">
+
+	$('.course-item').click(function() {
+		$('.info-box').css('height', '250px');
+	});
+
+	$('.ultrasonics-box').click(function() {
+		$('.course-item').addClass('not-selected');
+		$('.course-item').removeClass('selected');
+		$(this).addClass('selected');
+		$('.info-text').css('opacity', '0');
+		$('.ultrasonics-text').css('opacity', '1');
+	});
+
+	$('.sharpen-up').click(function() {
+		$('.course-item').addClass('not-selected');
+		$('.course-item').removeClass('selected');
+		$(this).addClass('selected');
+		$('.info-text').css('opacity', '0');
+		$('.sharpen-text').css('opacity', '1');
+	});
+
+	$('.ergonomic').click(function() {
+		$('.course-item').addClass('not-selected');
+		$('.course-item').removeClass('selected');
+		$(this).addClass('selected');
+		$('.info-text').css('opacity', '0');
+		$('.ergonomics-text').css('opacity', '1');
+	});
+
+	$('.clinical').click(function() {
+		$('.course-item').addClass('not-selected');
+		$('.course-item').removeClass('selected');
+		$(this).addClass('selected');
+		$('.info-text').css('opacity', '0');
+		$('.clinical-text').css('opacity', '1');
+	});
+
+	$('.choose-wisely').click(function() {
+		$('.course-item').addClass('not-selected');
+		$('.course-item').removeClass('selected');
+		$(this).addClass('selected');
+		$('.info-text').css('opacity', '0');
+		$('.choose-wisely-text').css('opacity', '1');
+	});
+
+	$('.otc').click(function() {
+		$('.course-item').addClass('not-selected');
+		$('.course-item').removeClass('selected');
+		$(this).addClass('selected');
+		$('.info-text').css('opacity', '0');
+		$('.otc-text').css('opacity', '1');
+	});
+
+	$('.caries').click(function() {
+		$('.course-item').addClass('not-selected');
+		$('.course-item').removeClass('selected');
+		$(this).addClass('selected');
+		$('.info-text').css('opacity', '0');
+		$('.caries-text').css('opacity', '1');
+		$('.info-box').css('height', '350px');
+	});
+
+	$('.course-item').click(function() {
+		$(this).removeClass('not-selected');
+	});
+
+</script>
