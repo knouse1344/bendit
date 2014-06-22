@@ -407,6 +407,58 @@
 	}
 }
 
+#articles {
+	width: 90%;
+	max-width: 1200px;
+	padding-top: 40px;
+	padding-bottom: 80px;
+	margin:auto;
+
+	.article-item {
+		text-align: center;
+		margin: 100px 0;
+	}
+
+	a {
+		padding-top: 25px;
+		font-size: 28px;
+		line-height: 28px;
+		color: #3B93A3;
+		font-family: 'Lato', sans-serif;
+	}
+
+	a img {
+		display: block;
+		margin: 0 auto 25px auto;
+		border: 1px solid #3B93A3;
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 28px;
+		color: #3B93A3;
+		font-family: 'Lato', sans-serif;
+		width: 65%;
+		float: right;
+		margin-top: 50px;
+	}
+}
+
+#upcoming {
+	text-align: center;
+
+	p {
+
+	}
+
+	iframe {
+		margin: 80px auto;
+		border: 1px solid #3B93A3;
+		box-shadow: 0px 0px 25px #3B93A3;
+	}
+}
+
+
 #products {
 	width: 90%;
 	max-width: 1200px;

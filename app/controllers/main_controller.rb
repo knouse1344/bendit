@@ -8,4 +8,7 @@ class MainController < ApplicationController
   def products
   end
 
+  def articles
+  end
+
 end
