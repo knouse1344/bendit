@@ -189,10 +189,10 @@
 		display: inline-block;
 		background: #3B93A3;
 		cursor: pointer;
-		-webkit-transition: all .25s ease-in-out;
-		-moz-transition: all .25s ease-in-out;
-		-o-transition: all .25s ease-in-out;
-		transition: all .25s ease-in-out;
+		-webkit-transition: all .125s ease-in-out;
+		-moz-transition: all .125s ease-in-out;
+		-o-transition: all .125s ease-in-out;
+		transition: all .125s ease-in-out;
 
 		p {
 			margin:0;
@@ -211,25 +211,40 @@
 
 	.info-box {
 		width: 100%;
-		height: 250px;
 		box-sizing: border-box;
 		padding:30px;
 		background: #ddd;
 		position: relative;
+		-webkit-transition: all .125s ease-in-out;
+		-moz-transition: all .125s ease-in-out;
+		-o-transition: all .125s ease-in-out;
+		transition: all .125s ease-in-out;
 
-		p {
-			position: absolute;
+		.info-text {
 			opacity: 0;
-			top:15px;
+			display: none;
+			margin: 0;
 			left: 30px;
 			font-size: 18px;
 			line-height: 30px;
 			color: #3B93A3;
 			font-family: 'Lato', sans-serif;
-			-webkit-transition: all .25s ease-in-out;
-			-moz-transition: all .25s ease-in-out;
-			-o-transition: all .25s ease-in-out;
-			transition: all .25s ease-in-out;
+			-webkit-transition: all .125s ease-in-out;
+			-moz-transition: all .125s ease-in-out;
+			-o-transition: all .125s ease-in-out;
+			transition: all .125s ease-in-out;
+
+			.class-title {
+				background: #3B93A3;
+				color: #fff;
+				width: 100%;
+				padding: 10px;
+				margin: 0 0 25px 0;
+				font-size: 20px;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-align: center;
+			}
 		}
 	}
 }
@@ -445,6 +460,10 @@
 }
 
 #upcoming {
+	width: 90%;
+	margin: auto;
+	padding-top: 40px;
+	padding-bottom: 80px;
 	text-align: center;
 
 	p {
@@ -513,5 +532,21 @@
 		img {
 			padding: 25px;
 		}
+	}
+}
+
+.title_outer {
+	padding: 15px; 
+	background: #fff;
+	border: 1px solid #3B93A3;
+
+	h1 {
+		text-align: center;
+		background: #3B93A3;
+		padding: 20px 0;
+		font-family: 'Lato', sans-serif;
+		text-transform: uppercase;
+		color: #fff;
+		margin:0;
 	}
 }
