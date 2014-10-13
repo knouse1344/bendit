@@ -14,6 +14,7 @@ Bendit::Application.routes.draw do
   get 'main/handout'
   get 'main/upcoming'
   get 'main/brochures'
+  get 'main/contact'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

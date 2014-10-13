@@ -123,6 +123,10 @@
 	}
 }
 
+/*  Course Offerings Page Styling   */
+
+
+
 #course_offerings {
 	width: 90%;
 	max-width: 1200px;
@@ -146,6 +150,16 @@
 		margin:0;
 	}
 
+	.intro {
+		color: #3B93A3;
+		font-size: 20px;
+		margin: 25px 0;
+		text-transform:uppercase;
+		text-align:center;
+		font-family: 'Lato', sans-serif;
+		font-weight: 900;
+	}
+
 	.item-row {
 		margin: 30px 0;
 		width: 100%;
@@ -154,38 +168,38 @@
 
 	.course-item {
 		vertical-align: top;
-		background: #ddd;
-		width: 18%;
+		background: #ebebeb;
+		width: 30%;
+		text-align: center;
 		box-sizing: border-box;
-		padding: 20px;
-		height: 200px;
-		margin: 0 15px;
 		display: inline-block;
+		padding: 10px;
+		height: 120px;
+		border: 3px solid #3B93A3;
+		margin: 0 1%;
 		-webkit-transition: all .25s ease-in-out;
 		-moz-transition: all .25s ease-in-out;
 		-o-transition: all .25s ease-in-out;
 		transition: all .25s ease-in-out;
-		cursor: pointer;
-		
+		cursor: pointer;		
 
-		p {
-			margin:0;
-			line-height: 32px;
-			font-size: 20px;	
+		span {
+			font-size: 16px;
+		    line-height: 24px;
 			color: #3B93A3;
 			font-family: 'Lato',sans-serif;
 			font-weight: 900;
-			text-transform: uppercase;	
+			text-transform: uppercase;
 		}
 	}
 
 	.selected {
 		vertical-align: top;
-		width: 18%;
+		width: 30%;
 		box-sizing: border-box;
-		padding: 20px;
-		height: 200px;
-		margin: 0 15px;
+		padding: 10px;
+		height: 120px;
+		margin: 0 1%;
 		display: inline-block;
 		background: #3B93A3;
 		cursor: pointer;
@@ -194,10 +208,10 @@
 		-o-transition: all .125s ease-in-out;
 		transition: all .125s ease-in-out;
 
-		p {
+		span {
 			margin:0;
-			line-height: 32px;
-			font-size: 20px;	
+			font-size: 16px;	
+			line-height: 24px;
 			color: #fff;
 			font-family: 'Lato',sans-serif;
 			font-weight: 900;
@@ -213,7 +227,8 @@
 		width: 100%;
 		box-sizing: border-box;
 		padding:30px;
-		background: #ddd;
+		background: #ebebeb;
+		border: 3px solid #3B93A3;
 		position: relative;
 		-webkit-transition: all .125s ease-in-out;
 		-moz-transition: all .125s ease-in-out;
@@ -224,7 +239,6 @@
 			opacity: 0;
 			display: none;
 			margin: 0;
-			left: 30px;
 			font-size: 18px;
 			line-height: 30px;
 			color: #3B93A3;
@@ -237,7 +251,6 @@
 			.class-title {
 				background: #3B93A3;
 				color: #fff;
-				width: 100%;
 				padding: 10px;
 				margin: 0 0 25px 0;
 				font-size: 20px;
@@ -444,6 +457,7 @@
 
 	a img {
 		display: block;
+		width: 500px;
 		margin: 0 auto 25px auto;
 		border: 1px solid #3B93A3;
 	}
@@ -548,5 +562,15 @@
 		text-transform: uppercase;
 		color: #fff;
 		margin:0;
+	}
+}
+
+#contact {
+	width: 50%;
+	margin: auto;
+	padding: 40px 0;
+
+	.contact-link {
+		text-align: center;
 	}
 }
