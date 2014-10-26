@@ -1,7 +1,15 @@
 Bendit::Application.routes.draw do
-  resources :categories
+  get "sessions/new"
+  get "users/new"
 
+  resources :categories
   resources :products
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
+  match '/signup', to: 'users#new', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

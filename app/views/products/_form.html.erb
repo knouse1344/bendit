@@ -16,7 +16,7 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-  <%= f.collection_select(:category_id, Category.all, :id, :name) %>
+  <%= f.collection_select(:category_id, Category.all, :id, :cat_name) %>
   </div>
   <div class="field">
     <%= f.label :product %><br>
