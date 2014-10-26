@@ -6,6 +6,7 @@ class MainController < ApplicationController
   end
 
   def products
+  	@categories = Category.all
   end
 
   def articles
