@@ -1,1 +1,9 @@
-<h2><%= category.name %></h2>
+<h2><%= category.name %><%= category.id %></h2>
+<div>
+	<% category.products.each do |p| %>
+		<%= p.title %>
+		<%= p.product %>
+	<% end %>
+
+	<%= render Product.all %>
+</div>
