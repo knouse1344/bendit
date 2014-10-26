@@ -1,11 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div id="cat-index" class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+		<p>
+		  <strong>Name:</strong>
+		  <%= @category.cat_name %>
+		</p>
 
-<div><p>Cateogry products</p><%= @category.products.all %></div>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+		<%= link_to 'Edit', edit_category_path(@category) %> |
+		<%= link_to 'Back', categories_path %>
+	</div>
+  </div>
+</div>
