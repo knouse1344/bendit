@@ -6,6 +6,7 @@
 #cat-index {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
+	padding-top: 60px;
 
 	h1 {
 		text-align: center;
@@ -32,10 +33,12 @@
 		color: #3B93A3;
 		background: #eee;
 		border: 2px solid #ddd;
+		display: inline-block;
 		padding: 10px 0;
 		font-family: 'Open Sans Condensed',sans-serif;
 		font-weight: bold;
 		font-size: 18px;
+		margin-top: 40px;
 		cursor: pointer;
 		min-width: 200px;
 	}

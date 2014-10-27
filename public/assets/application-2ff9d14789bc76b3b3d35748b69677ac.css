@@ -50,10 +50,11 @@ html, body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 700;
   color: #3B93A3;
+  font-size: 16px;
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 56, /home/bryan/Documents/bendit/app/assets/stylesheets/application.css.scss */
+/* line 57, /home/bryan/Documents/bendit/app/assets/stylesheets/application.css.scss */
 #header #nav-link-set .nav-link {
   display: inline-block;
   padding: 15px 25px 5px 25px;
@@ -67,7 +68,7 @@ html, body {
   -o-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
 }
-/* line 70, /home/bryan/Documents/bendit/app/assets/stylesheets/application.css.scss */
+/* line 71, /home/bryan/Documents/bendit/app/assets/stylesheets/application.css.scss */
 #header #nav-link-set .nav-tooth {
   height: 25px;
   width: 21px;
@@ -83,12 +84,12 @@ html, body {
   -o-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
 }
-/* line 86, /home/bryan/Documents/bendit/app/assets/stylesheets/application.css.scss */
+/* line 87, /home/bryan/Documents/bendit/app/assets/stylesheets/application.css.scss */
 #header #nav-link-set a:hover > .nav-tooth {
   opacity: 1;
 }
 
-/* line 93, /home/bryan/Documents/bendit/app/assets/stylesheets/application.css.scss */
+/* line 94, /home/bryan/Documents/bendit/app/assets/stylesheets/application.css.scss */
 .signature {
   font-style: italic;
 }
@@ -96,19 +97,20 @@ html, body {
 #cat-index {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  padding-top: 60px;
 }
-/* line 10, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
+/* line 11, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
 #cat-index h1 {
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #3B93A3;
   font-weight: bold;
 }
-/* line 17, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
+/* line 18, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
 #cat-index table {
   width: 100%;
 }
-/* line 21, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
+/* line 22, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
 #cat-index input {
   display: block;
   min-width: 300px;
@@ -118,19 +120,21 @@ html, body {
   margin-right: auto;
   margin-bottom: 20px;
 }
-/* line 31, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
+/* line 32, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
 #cat-index .submitbtn {
   color: #3B93A3;
   background: #eee;
   border: 2px solid #ddd;
+  display: inline-block;
   padding: 10px 0;
   font-family: 'Open Sans Condensed',sans-serif;
   font-weight: bold;
   font-size: 18px;
+  margin-top: 40px;
   cursor: pointer;
   min-width: 200px;
 }
-/* line 43, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
+/* line 46, /home/bryan/Documents/bendit/app/assets/stylesheets/categories.css.scss */
 #cat-index .submitbtn:hover {
   opacity: .5;
 }
@@ -646,7 +650,7 @@ html, body {
   padding-bottom: 5px;
   font-family: 'Lato',sans-serif;
   color: #3B93A3;
-  margin: 30px 0 -3px 0;
+  margin: 30px 0 20px 0;
 }
 /* line 526, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
 #products .desc {
@@ -664,23 +668,17 @@ html, body {
 }
 /* line 540, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
 #products .row {
-  width: 100%;
-  padding: 60px 0;
   display: block;
   text-align: center;
 }
-/* line 546, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
-#products .row img {
-  padding: 25px;
-}
 
-/* line 552, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
+/* line 546, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
 .title_outer {
   padding: 15px;
   background: #fff;
   border: 1px solid #3B93A3;
 }
-/* line 557, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
+/* line 551, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
 .title_outer h1 {
   text-align: center;
   background: #3B93A3;
@@ -691,13 +689,13 @@ html, body {
   margin: 0;
 }
 
-/* line 568, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
+/* line 562, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
 #contact {
   width: 50%;
   margin: auto;
   padding: 40px 0;
 }
-/* line 573, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
+/* line 567, /home/bryan/Documents/bendit/app/assets/stylesheets/main.css.scss */
 #contact .contact-link {
   text-align: center;
 }
@@ -705,25 +703,26 @@ html, body {
 #product-index {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  padding-top: 60px;
 }
-/* line 10, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+/* line 11, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
 #product-index h1 {
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   color: #3B93A3;
   font-weight: bold;
 }
-/* line 17, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+/* line 18, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
 #product-index table {
   width: 100%;
 }
-/* line 21, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+/* line 22, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
 #product-index select {
   min-width: 250px;
   display: block;
   margin: 0 auto 15px auto;
 }
-/* line 27, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+/* line 28, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
 #product-index input {
   display: block;
   min-width: 300px;
@@ -733,11 +732,13 @@ html, body {
   margin-right: auto;
   margin-bottom: 20px;
 }
-/* line 37, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+/* line 38, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
 #product-index .submitbtn {
   color: #3B93A3;
   background: #eee;
   border: 2px solid #ddd;
+  display: inline-block;
+  margin-top: 40px;
   padding: 10px 0;
   font-family: 'Open Sans Condensed',sans-serif;
   font-weight: bold;
@@ -745,9 +746,45 @@ html, body {
   cursor: pointer;
   min-width: 200px;
 }
-/* line 49, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+/* line 52, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
 #product-index .submitbtn:hover {
   opacity: .5;
+}
+
+/* line 57, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+.product-category {
+  padding: 40px 0;
+}
+/* line 60, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+.product-category h2 {
+  margin-bottom: 25px;
+}
+/* line 64, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .col-sm-3 {
+  margin: 15px 0;
+}
+/* line 68, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block {
+  border: 2px solid #ddd;
+  display: block;
+  padding-bottom: 15px;
+}
+/* line 73, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  color: #3B93A3;
+}
+/* line 81, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block img {
+  width: 100%;
+}
+/* line 85, /home/bryan/Documents/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block p {
+  text-decoration: none;
+  color: #555;
 }
 /* line 1, /home/bryan/Documents/bendit/app/assets/stylesheets/scaffolds.css.scss */
 #notice {
@@ -791,14 +828,16 @@ html, body {
   width: 50%;
   text-align: center;
   margin: auto;
+  padding-top: 60px;
   font-family: 'Open Sans', sans-serif;
 }
-/* line 12, /home/bryan/Documents/bendit/app/assets/stylesheets/users.css.scss */
+/* line 13, /home/bryan/Documents/bendit/app/assets/stylesheets/users.css.scss */
 #signup h1 {
   font-family: 'Open Sans Condensed', sans-serif;
   color: #3B93A3;
+  font-weight: bold;
 }
-/* line 17, /home/bryan/Documents/bendit/app/assets/stylesheets/users.css.scss */
+/* line 19, /home/bryan/Documents/bendit/app/assets/stylesheets/users.css.scss */
 #signup input {
   display: block;
   min-width: 300px;
@@ -808,18 +847,20 @@ html, body {
   margin-right: auto;
   margin-bottom: 20px;
 }
-/* line 27, /home/bryan/Documents/bendit/app/assets/stylesheets/users.css.scss */
+/* line 29, /home/bryan/Documents/bendit/app/assets/stylesheets/users.css.scss */
 #signup .submitbtn {
   color: #3B93A3;
+  display: inline-block;
   background: #eee;
   border: 2px solid #ddd;
   padding: 10px 0;
   font-family: 'Open Sans Condensed',sans-serif;
   font-weight: bold;
+  margin-top: 40px;
   font-size: 18px;
   cursor: pointer;
 }
-/* line 38, /home/bryan/Documents/bendit/app/assets/stylesheets/users.css.scss */
+/* line 42, /home/bryan/Documents/bendit/app/assets/stylesheets/users.css.scss */
 #signup .submitbtn:hover {
   opacity: .5;
 }

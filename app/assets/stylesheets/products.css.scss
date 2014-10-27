@@ -6,6 +6,7 @@
 #product-index {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
+	padding-top: 60px;
 
 	h1 {
 		text-align: center;
@@ -38,6 +39,8 @@
 		color: #3B93A3;
 		background: #eee;
 		border: 2px solid #ddd;
+		display: inline-block;
+		margin-top: 40px;
 		padding: 10px 0;
 		font-family: 'Open Sans Condensed',sans-serif;
 		font-weight: bold;
@@ -48,5 +51,40 @@
 
 	.submitbtn:hover {
 		opacity: .5;
+	}
+}
+
+.product-category {
+	padding: 40px 0;
+
+	h2 {
+		margin-bottom: 25px;
+	}
+
+	.col-sm-3 {
+		margin: 15px 0;
+	}
+	
+	.product-block {
+		border: 2px solid #ddd;
+		display: block;
+		padding-bottom: 15px;
+
+		h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+			height: 40px;
+			color: #3B93A3;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		p {
+			text-decoration: none;
+			color: #555;
+		}
 	}
 }

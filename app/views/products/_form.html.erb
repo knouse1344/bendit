@@ -13,17 +13,14 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="field">
   <%= f.label "Select Category" %>
   <%= f.collection_select(:category_id, Category.all, :id, :cat_name) %>
   </div>
-  <div class="field">
-    <%= f.label :product %><br>
-    <%= f.text_field :product %>
-  </div>
   <div class="actions">
     <%= f.submit "Create Product", class: 'submitbtn' %>
+    <%= link_to 'Back', products_path, class: "submitbtn" %>
   </div>
 <% end %>
