@@ -563,8 +563,29 @@
 	width: 50%;
 	margin: auto;
 	padding: 40px 0;
+	text-align: center;
+
+	h1 {
+		text-align: center;
+		background: #3B93A3;
+		padding: 20px 0;
+		font-family: 'Lato', sans-serif;
+		text-transform: uppercase;
+		color: #fff;
+		margin:0;
+	}
+
+	.outer {
+		padding: 15px; 
+		background: #fff;
+		margin-bottom: 25px;
+		border: 1px solid #3B93A3;
+	}
+
+	p {font-size: 20px;}
 
 	.contact-link {
 		text-align: center;
+		font-size: 20px;
 	}
 }

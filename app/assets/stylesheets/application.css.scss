@@ -97,3 +97,24 @@ html, body {
 .signature {
 	font-style: italic;
 }
+
+footer {
+	margin-top: 40px;
+	padding-top: 15px;
+	margin-bottom: 100px;
+	border-top: 2px solid #ddd;
+	text-align: center;
+
+	a {
+		display: inline-block;
+		padding: 5px 15px;
+	}
+
+	span {
+
+	}
+
+	.copyright {
+		padding: 5px 45px;
+	}
+}

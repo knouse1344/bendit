@@ -25,29 +25,40 @@
 </head>
 <body>
 
-<div id="header">
-	<a href="/main/index"><img class="logo" src="/assets/logo.jpg" /></a>
-	<div id="nav-link-set">
-		<a href="/main/about">About<div class="nav-tooth"></div></a>
-		<a href="/main/brochures">Brochures<div class="nav-tooth"></div></a>
-		<a href="/main/products">Product Links<div class="nav-tooth"></div></a>
-		<a href="/main/articles">Published Articles<div class="nav-tooth"></div></a>
-		<a href="/main/handout">Handout Information<div class="nav-tooth"></div></a>
-		<a href="/main/upcoming">Upcoming Programs<div class="nav-tooth"></div></a>
-		<a href="/main/course_offerings">Course Offerings<div class="nav-tooth"></div></a>
-		<a href="/main/contact">Contact Us<div class="nav-tooth"></div></a>			
-		<% if signed_in? %>	        
-	        <a class="admin-link" href="/categories" rel="nofollow">Categories<div class="nav-tooth"></div></a>
-	        <a class="admin-link" href="/products" rel="nofollow">Products<div class="nav-tooth"></div></a>
-	        <a data-method="delete" class="admin-link" href="/signout" rel="nofollow">Log Out<div class="nav-tooth"></div></a>
-	    <% else %>
-	        <a href="/signin">Log In<div class="nav-tooth"></div></a>
-	    <% end %>	<!-- 
-		<a href="/signin">Log In<div class="nav-tooth"></div></a> -->
+	<div id="header">
+		<a href="/main/index"><img class="logo" src="/assets/logo.jpg" /></a>
+		<div id="nav-link-set">
+			<a href="/main/about">About<div class="nav-tooth"></div></a>
+			<a href="/main/brochures">Brochures<div class="nav-tooth"></div></a>
+			<a href="/main/products">Product Links<div class="nav-tooth"></div></a>
+			<a href="/main/articles">Published Articles<div class="nav-tooth"></div></a>
+			<a href="/main/handout">Handout Information<div class="nav-tooth"></div></a>
+			<a href="/main/upcoming">Upcoming Programs<div class="nav-tooth"></div></a>
+			<a href="/main/course_offerings">Course Offerings<div class="nav-tooth"></div></a>
+			<a href="/main/contact">Contact Us<div class="nav-tooth"></div></a>			
+			<% if signed_in? %>	        
+		        <a class="admin-link" href="/categories" rel="nofollow">Categories<div class="nav-tooth"></div></a>
+		        <a class="admin-link" href="/products" rel="nofollow">Products<div class="nav-tooth"></div></a>
+		        <a data-method="delete" class="admin-link" href="/signout" rel="nofollow">Log Out<div class="nav-tooth"></div></a>
+		    <% else %>
+		        <a href="/signin">Log In<div class="nav-tooth"></div></a>
+		    <% end %>	<!-- 
+			<a href="/signin">Log In<div class="nav-tooth"></div></a> -->
+		</div>
 	</div>
-</div>
 
 	<%= yield %>
+
+	<footer class="container">
+		<div class="col-sm-12">
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<span class="copyright"> &copy; Copyright 2014</span>
+			<a href="#">Contact</a>
+			<a href="#">Log In</a>
+		</div>
+	</footer>
+
 
 </body>
 </html>
