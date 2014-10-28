@@ -35,7 +35,14 @@
 		<a href="/main/handout">Handout Information<div class="nav-tooth"></div></a>
 		<a href="/main/upcoming">Upcoming Programs<div class="nav-tooth"></div></a>
 		<a href="/main/course_offerings">Course Offerings<div class="nav-tooth"></div></a>
-		<a href="/main/contact">Contact Us<div class="nav-tooth"></div></a><!-- 
+		<a href="/main/contact">Contact Us<div class="nav-tooth"></div></a>			
+		<% if signed_in? %>	        
+	        <a class="admin-link" href="/categories" rel="nofollow">Categories<div class="nav-tooth"></div></a>
+	        <a class="admin-link" href="/products" rel="nofollow">Products<div class="nav-tooth"></div></a>
+	        <a data-method="delete" class="admin-link" href="/signout" rel="nofollow">Log Out<div class="nav-tooth"></div></a>
+	    <% else %>
+	        <a href="/signin">Log In<div class="nav-tooth"></div></a>
+	    <% end %>	<!-- 
 		<a href="/signin">Log In<div class="nav-tooth"></div></a> -->
 	</div>
 </div>
