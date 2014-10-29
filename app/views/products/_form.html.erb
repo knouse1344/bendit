@@ -16,6 +16,14 @@
     <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="field">
+    <%= f.label :product_img_url %><br>
+    <%= f.text_field :product_img_url, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :product_url %><br>
+    <%= f.text_field :product_url, class: "form-control" %>
+  </div>
+  <div class="field">
   <%= f.label "Select Category" %>
   <%= f.collection_select(:category_id, Category.all, :id, :cat_name) %>
   </div>

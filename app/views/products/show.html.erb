@@ -5,12 +5,12 @@
 
 		<p>
 		  <strong>Title:</strong>
-		  <%= @product.title %>
+		  <a target="_blank" href="<%= @product.product_url %>"><%= @product.title %></a>
 		</p>
 
 		<p>
 		  <strong>Product:</strong>
-		  <%= @product.product %>
+		  <img src="<%= @product.product_img_url %>" />
 		</p>
 
 		<p>

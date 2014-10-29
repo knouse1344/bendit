@@ -8,9 +8,9 @@
 		<div class="col-sm-12">
 			<% category.products.each do |p| %>
 				<div class="col-sm-3">
-					<a href="#" class="product-block col-sm-10 col-sm-offset-1">
+					<a target="_blank" href="<%= p.product_url %>" class="product-block col-sm-10 col-sm-offset-1">
 						<h3><%= p.title %></h3>
-						<img src="/assets/products/191_ocf_logo_.jpg" />
+						<div class="product-image" style="background: url('<%= p.product_img_url %>'); background-size: contain; background-repeat: no-repeat; background-position: center;"> </div>
 					</a>
 				</div>
 			<% end %>

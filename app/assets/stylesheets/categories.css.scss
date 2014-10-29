@@ -17,6 +17,21 @@
 
 	table {
 		width: 100%;
+		margin: 40px 0;
+
+		.col-name {
+			text-align: left;
+			padding: 8px;
+		}
+
+		td {
+			padding: 0;
+
+			a {
+				display: block;
+				padding: 8px;
+			}
+		}
 	}
 
 	input {
@@ -38,7 +53,7 @@
 		font-family: 'Open Sans Condensed',sans-serif;
 		font-weight: bold;
 		font-size: 18px;
-		margin-top: 40px;
+		margin-bottom: 25px;
 		cursor: pointer;
 		min-width: 200px;
 	}

@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 20141026194708) do
 
   create_table "products", force: true do |t|
     t.string   "title"
-    t.string   "product"
+    t.text     "product_img_url"
+    t.string   "product_url"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
