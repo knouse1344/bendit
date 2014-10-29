@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.paginate(page: params[:page], :per_page => 5)
+    @products = Product.paginate(page: params[:page], :per_page => 15, :order => "category_id ASC")
   end
 
   # GET /products/1

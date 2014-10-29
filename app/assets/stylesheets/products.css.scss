@@ -6,7 +6,7 @@
 #product-index {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-	padding-top: 60px;
+	padding-top: 30px;
 
 	h1 {
 		text-align: center;
@@ -15,16 +15,31 @@
 		font-weight: bold;
 	}
 
+	.pagination {
+		margin: 10px 0;
+	}
+
 	table {
 		width: 100%;
-		margin: 40px 0;
+		margin: 0 0 20px 0;
 
 		.col-name {
 			text-align: left;
+			padding: 8px;
 		}
 
 		.col-desc {
 			text-align: left;
+			padding: 8px;
+		}
+
+		td {
+			padding: 0;
+
+			a {
+				display: block;
+				padding: 8px;
+			}
 		}
 	}
 
@@ -49,7 +64,7 @@
 		background: #eee;
 		border: 2px solid #ddd;
 		display: inline-block;
-		margin-bottom: 25px;
+		margin: 25px 0;
 		padding: 10px 0;
 		font-family: 'Open Sans Condensed',sans-serif;
 		font-weight: bold;
