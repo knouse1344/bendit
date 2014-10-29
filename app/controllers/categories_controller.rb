@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories
   def index
-    @categories = Category.all
+    @categories = Category.paginate(page: params[:page], :per_page => 5)
   end
 
   # GET /categories/1
