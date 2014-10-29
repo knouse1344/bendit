@@ -25,7 +25,7 @@
   </div>
   <div class="field">
   <%= f.label "Select Category" %>
-  <%= f.collection_select(:category_id, Category.all, :id, :cat_name) %>
+  <div class="collection-select"><%= f.collection_select(:category_id, Category.all, :id, :cat_name) %></div>
   </div>
   <div class="actions">
     <%= f.submit "Save Product", class: 'button button-create' %>

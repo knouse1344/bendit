@@ -12,6 +12,9 @@
 						<h3><%= p.title %></h3>
 						<div class="product-image" style="background: url('<%= p.product_img_url %>'); background-size: contain; background-repeat: no-repeat; background-position: center;"> </div>
 					</a>
+					<% if signed_in? %>	        
+				        <a href="/products/<%= p.id %>/edit">EDIT</a>
+				    <% end %>	
 				</div>
 			<% end %>
 		</div>

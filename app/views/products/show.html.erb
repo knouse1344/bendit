@@ -1,21 +1,21 @@
 <div id="product-index" class="container">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-		<p id="notice"><%= notice %></p>
+    	<% if notice != nil %>
+			<p id="notice"><%= notice %></p>
+		<% end %>
 
 		<p>
 		  <strong>Title:</strong>
 		  <a target="_blank" href="<%= @product.product_url %>"><%= @product.title %></a>
 		</p>
-
 		<p>
-		  <strong>Product:</strong>
-		  <img src="<%= @product.product_img_url %>" />
+			<strong>Category</strong>
+			<%= @product.category.cat_name %>
 		</p>
 
 		<p>
-			<strong>Associations</strong>
-			<%= @product.category_id %>
+		  <img src="<%= @product.product_img_url %>" />
 		</p>
 
 		<%= link_to 'Edit', edit_product_path(@product), class: "button button-create" %>
