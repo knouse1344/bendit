@@ -9,7 +9,7 @@
 	padding-top: 30px;
 
 	h1 {
-		text-align: center;
+		float: left;
 		font-family: 'Open Sans Condensed', sans-serif;
 		color: #3B93A3;
 		font-weight: bold;
@@ -59,11 +59,10 @@
 		margin-bottom: 20px;
 	}
 
-	.submitbtn {
+	.button {
 		color: #3B93A3;
 		background: #eee;
 		border: 2px solid #ddd;
-		display: inline-block;
 		margin: 25px 0;
 		padding: 10px 0;
 		font-family: 'Open Sans Condensed',sans-serif;
@@ -73,7 +72,16 @@
 		min-width: 200px;
 	}
 
-	.submitbtn:hover {
+	.button-submit {
+		display: block;
+		float: right;
+	}
+
+	.button-create {
+		display: inline-block;
+	}
+
+	.button:hover {
 		opacity: .5;
 	}
 }

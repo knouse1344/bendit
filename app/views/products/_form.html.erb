@@ -28,7 +28,7 @@
   <%= f.collection_select(:category_id, Category.all, :id, :cat_name) %>
   </div>
   <div class="actions">
-    <%= f.submit "Create Product", class: 'submitbtn' %>
-    <%= link_to 'Back', products_path, class: "submitbtn" %>
+    <%= f.submit "Save Product", class: 'button button-create' %>
+    <%= link_to 'Back', products_path, class: "button button-create" %>
   </div>
 <% end %>
