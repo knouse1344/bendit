@@ -3,18 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#product-index {
+#data-index {
 	font-family: 'Open Sans', sans-serif;
-	text-align: center;
 	padding-top: 30px;
 
 	h1 {
-		float: left;
 		font-family: 'Open Sans Condensed', sans-serif;
 		color: #3B93A3;
+		text-align: center;
 		font-weight: bold;
 	}
 	
+	.float-left {
+		float: left;
+	}
+
 	#notice {
 		background: rgba(0, 200, 0, .1);
 		padding: 5px;
@@ -23,6 +26,23 @@
 
 	.pagination {
 		margin: 10px 0;
+		display: block;
+		text-align: center;
+		font-size: 16px;
+
+		a {
+			display: inline-block;
+			padding: 5px;
+		}
+
+		em {
+			display: inline-block;
+			padding: 5px;
+		}
+	}
+
+	.show-page {
+		text-align: center;
 	}
 
 	table {
@@ -52,7 +72,7 @@
 	select {
 		min-width: 250px;
 		display: block;
-		margin: 0 auto 15px auto;
+		margin: 0 0 15px 0;
 	}
 
 	input {
@@ -65,8 +85,16 @@
 		margin-bottom: 20px;
 	}
 
-	.collection-select select {
-		padding: 5px;
+	.collection-select {
+
+		select {
+			padding: 5px;
+		}
+
+	}
+
+	.actions {
+		text-align: center;
 	}
 
 	.button {
@@ -78,6 +106,7 @@
 		font-family: 'Open Sans Condensed',sans-serif;
 		font-weight: bold;
 		font-size: 18px;
+		text-align: center;
 		cursor: pointer;
 		min-width: 200px;
 	}

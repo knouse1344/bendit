@@ -5,12 +5,13 @@
 
 #signup {
 	width: 50%;
-	text-align: center;
+	text-align: left;
 	margin: auto;
 	padding-top: 60px;
 	font-family: 'Open Sans', sans-serif;
 
 	h1 {
+		text-align: center;
 		font-family: 'Open Sans Condensed', sans-serif;
 		color: #3B93A3;
 		font-weight: bold;
@@ -26,6 +27,10 @@
 		margin-bottom: 20px;
 	}
 
+	.button-container {
+		text-align: center;
+	}
+	
 	.submitbtn {
 		color: #3B93A3;
 		display: inline-block;
