@@ -1,0 +1,959 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 17, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 23, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+#header {
+  padding-top: 20px;
+  width: 100%;
+  border-bottom: 3px solid #3B93A3;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 30, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+#header .logo {
+  width: 400px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+/* line 38, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+#header #nav-link-set {
+  width: 80%;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* line 45, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+#header #nav-link-set a {
+  position: relative;
+  display: inline-block;
+  padding: 25px 25px 10px 25px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  color: #3B93A3;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* line 57, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+#header #nav-link-set .admin-link {
+  color: #c00;
+}
+/* line 61, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+#header #nav-link-set .nav-link {
+  display: inline-block;
+  padding: 15px 25px 5px 25px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  color: #3B93A3;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+/* line 75, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+#header #nav-link-set .nav-tooth {
+  height: 25px;
+  width: 21px;
+  background: url("/assets/tooth.jpg") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -10px;
+  opacity: 0;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+/* line 91, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+#header #nav-link-set a:hover > .nav-tooth {
+  opacity: 1;
+}
+
+/* line 98, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+.signature {
+  font-style: italic;
+}
+
+/* line 102, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+footer {
+  margin-top: 40px;
+  padding-top: 15px;
+  margin-bottom: 100px;
+  border-top: 2px solid #ddd;
+  text-align: center;
+}
+/* line 109, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+footer a {
+  display: inline-block;
+  padding: 5px 15px;
+  color: #3B93A3;
+}
+/* line 119, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/application.css.scss */
+footer .copyright {
+  padding: 15px 65px;
+  color: #999;
+}
+/* line 7, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index {
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin: auto;
+}
+/* line 14, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index .heading {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #3B93A3;
+  font-weight: 700;
+  color: #3B93A3;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  margin: 0 0 30px 0;
+}
+/* line 23, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index .heading a {
+  font-size: 18px;
+  float: right;
+  color: #3B93A3;
+  line-height: 55px;
+}
+/* line 29, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index .heading a .fa {
+  font-size: 30px;
+  margin-left: 15px;
+}
+/* line 36, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index .intro-description {
+  width: 65%;
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+  color: #777;
+  line-height: 30px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+/* line 49, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index .description {
+  border-top: 1px solid #4CAFAC;
+  padding-top: 15px;
+  vertical-align: top;
+  display: inline-block;
+  text-align: left;
+  color: #777;
+  line-height: 30px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+/* line 62, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index .description .signature {
+  font-style: italic;
+}
+/* line 67, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index .image_outer_box {
+  display: inline-block;
+  padding: 15px;
+  border: 1px solid #4CAFAC;
+}
+/* line 73, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index .image_box {
+  background: #4CAFAC;
+  padding: 25px;
+}
+/* line 78, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #introduction {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 82, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #introduction .description {
+  width: 65%;
+}
+/* line 86, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #introduction .image_outer_box {
+  width: 25%;
+  margin-right: 4%;
+}
+/* line 91, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #introduction .desc-top-speaker {
+  width: 50%;
+  float: left;
+}
+/* line 96, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #introduction .image_outer_box img {
+  width: 100%;
+}
+/* line 101, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #information {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+/* line 107, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #information .description {
+  display: inline-block;
+  width: 45%;
+}
+/* line 112, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #information .image_outer_box {
+  display: inline-block;
+  width: 45%;
+  margin-left: 5%;
+  word-spacing: 40px;
+}
+/* line 119, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #information img {
+  display: inline-block;
+}
+/* line 126, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #article .description {
+  width: 72%;
+  display: inline-block;
+}
+/* line 131, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#index #article img {
+  margin-right: 5%;
+  width: 20%;
+}
+
+/*  Course Offerings Page Styling   */
+/* line 142, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings {
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin: auto;
+}
+/* line 149, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .outer {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #3B93A3;
+}
+/* line 155, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings h1 {
+  text-align: center;
+  background: #3B93A3;
+  padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+/* line 165, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .intro {
+  color: #3B93A3;
+  font-size: 20px;
+  margin: 25px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+/* line 175, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .item-row {
+  margin: 30px 0;
+  width: 100%;
+  text-align: center;
+}
+/* line 181, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .course-item {
+  vertical-align: top;
+  background: #ebebeb;
+  width: 30%;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px;
+  height: 120px;
+  border: 3px solid #3B93A3;
+  margin: 0 1%;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  cursor: pointer;
+}
+/* line 198, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .course-item span {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3B93A3;
+  font-family: 'Lato',sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+/* line 208, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .selected {
+  vertical-align: top;
+  width: 30%;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 120px;
+  margin: 0 1%;
+  display: inline-block;
+  background: #3B93A3;
+  cursor: pointer;
+  -webkit-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -o-transition: all .125s ease-in-out;
+  transition: all .125s ease-in-out;
+}
+/* line 223, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .selected span {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  font-family: 'Lato',sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+/* line 234, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .not-selected {
+  opacity: .3;
+}
+/* line 238, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .info-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  background: #ebebeb;
+  border: 3px solid #3B93A3;
+  position: relative;
+  -webkit-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -o-transition: all .125s ease-in-out;
+  transition: all .125s ease-in-out;
+}
+/* line 250, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .info-box .info-text {
+  opacity: 0;
+  display: none;
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+  color: #3B93A3;
+  font-family: 'Lato', sans-serif;
+  -webkit-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -o-transition: all .125s ease-in-out;
+  transition: all .125s ease-in-out;
+}
+/* line 263, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#course_offerings .info-box .info-text .class-title {
+  background: #3B93A3;
+  color: #fff;
+  padding: 10px;
+  margin: 0 0 25px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 277, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience {
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin: auto;
+}
+/* line 284, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .page_desc {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  color: #777;
+  line-height: 24px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+/* line 296, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience h1 {
+  width: 100%;
+  background: #999;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  padding: 5px 0;
+}
+/* line 308, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .col_l {
+  width: 47.5%;
+  float: left;
+}
+/* line 313, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .col_r {
+  width: 47.5%;
+  float: right;
+}
+/* line 318, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .box {
+  width: 100%;
+  background: #dedede;
+  margin-top: 30px;
+}
+/* line 323, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .box h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #3B93A3;
+  font-size: 16px;
+  padding: 10px 0px 0px 15px;
+  margin: 0;
+  text-transform: uppercase;
+}
+/* line 333, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .box h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+  text-transform: uppercase;
+  background: #63c6c3;
+  box-sizing: border-box;
+  padding: 10px 15px 10px 15px;
+  margin: 10px 0 0 0;
+}
+/* line 345, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .box p {
+  margin: 0;
+  padding: 15px 15px 30px 15px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #3B93A3;
+  line-height: 24px;
+}
+/* line 355, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .contact_box {
+  width: 100%;
+  border: 1px solid #888;
+  padding: 25px;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+/* line 362, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .contact_box .inner_box {
+  width: 100%;
+  text-align: center;
+  background: #888;
+}
+/* line 367, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .contact_box .inner_box .heading {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 380, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#experience .contact_box .inner_box .subheading {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 40px 0;
+  color: #fff;
+}
+
+/* line 394, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+.clear {
+  clear: both;
+}
+
+/* line 399, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#about {
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin: auto;
+}
+/* line 406, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#about .image_outer_box {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 15px;
+  width: 30%;
+  border: 1px solid #3B93A3;
+}
+/* line 414, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#about .image_outer_box img {
+  width: 100%;
+}
+/* line 418, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#about .image_box {
+  background: #3B93A3;
+  padding: 25px;
+}
+/* line 423, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#about .outer {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #3B93A3;
+}
+/* line 429, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#about h1 {
+  text-align: center;
+  background: #3B93A3;
+  padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+/* line 439, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#about p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #3B93A3;
+  font-family: 'Lato', sans-serif;
+  width: 65%;
+  float: right;
+  margin-top: 50px;
+}
+
+/* line 450, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#articles {
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin: auto;
+}
+/* line 457, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#articles .article-item {
+  text-align: center;
+  margin: 100px 0;
+}
+/* line 462, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#articles a {
+  padding-top: 25px;
+  font-size: 28px;
+  line-height: 28px;
+  color: #3B93A3;
+  font-family: 'Lato', sans-serif;
+}
+/* line 470, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#articles a img {
+  display: block;
+  width: 500px;
+  margin: 0 auto 25px auto;
+  border: 1px solid #3B93A3;
+}
+/* line 477, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#articles p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #3B93A3;
+  font-family: 'Lato', sans-serif;
+  width: 65%;
+  float: right;
+  margin-top: 50px;
+}
+
+/* line 488, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#upcoming {
+  width: 90%;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+/* line 499, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#upcoming iframe {
+  margin: 80px auto;
+  border: 1px solid #3B93A3;
+  box-shadow: 0px 0px 25px #3B93A3;
+}
+
+/* line 507, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#products {
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin: auto;
+}
+/* line 514, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#products .outer {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #3B93A3;
+}
+/* line 520, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#products h1 {
+  text-align: center;
+  background: #3B93A3;
+  padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+/* line 530, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#products h2 {
+  border-bottom: 3px solid #3B93A3;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Lato',sans-serif;
+  color: #3B93A3;
+  margin: 30px 0 20px 0;
+}
+/* line 539, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#products .desc {
+  padding-top: 40px;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  color: #3B93A3;
+}
+/* line 547, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#products .desc ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+/* line 553, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#products .row {
+  display: block;
+  text-align: center;
+}
+
+/* line 559, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+.title_outer {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #3B93A3;
+}
+/* line 564, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+.title_outer h1 {
+  text-align: center;
+  background: #3B93A3;
+  padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+/* line 575, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#contact {
+  width: 50%;
+  margin: auto;
+  padding: 40px 0;
+  text-align: center;
+}
+/* line 581, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#contact h1 {
+  text-align: center;
+  background: #3B93A3;
+  padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+/* line 591, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#contact .outer {
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 25px;
+  border: 1px solid #3B93A3;
+}
+/* line 598, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#contact p {
+  font-size: 20px;
+}
+/* line 600, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/main.css.scss */
+#contact .contact-link {
+  text-align: center;
+  font-size: 20px;
+}
+/* line 6, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 30px;
+}
+/* line 10, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #3B93A3;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 17, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .float-left {
+  float: left;
+}
+/* line 21, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index #notice {
+  background: rgba(0, 200, 0, 0.1);
+  padding: 5px;
+  border: 2px solid #0c0;
+}
+/* line 27, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .pagination {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+}
+/* line 33, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .pagination a {
+  display: inline-block;
+  padding: 5px;
+}
+/* line 38, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .pagination em {
+  display: inline-block;
+  padding: 5px;
+}
+/* line 44, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .show-page {
+  text-align: center;
+}
+/* line 48, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index table {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+/* line 52, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index table .col-name {
+  text-align: left;
+  padding: 8px;
+}
+/* line 57, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index table .col-desc {
+  text-align: left;
+  padding: 8px;
+}
+/* line 62, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index table td {
+  padding: 0;
+}
+/* line 65, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index table td a {
+  display: block;
+  padding: 8px;
+}
+/* line 72, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index select {
+  min-width: 250px;
+  display: block;
+  margin: 0 0 15px 0;
+}
+/* line 78, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index input {
+  display: block;
+  min-width: 300px;
+  margin-left: auto;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+/* line 90, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .collection-select select {
+  padding: 5px;
+}
+/* line 96, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .actions {
+  text-align: center;
+}
+/* line 100, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .button {
+  color: #3B93A3;
+  background: #eee;
+  border: 2px solid #ddd;
+  margin: 25px 0;
+  padding: 10px 0;
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  min-width: 200px;
+}
+/* line 114, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .button-submit {
+  display: block;
+  float: right;
+}
+/* line 119, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .button-create {
+  display: inline-block;
+}
+/* line 123, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+#data-index .button:hover {
+  opacity: .5;
+}
+
+/* line 128, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category {
+  padding: 40px 0;
+}
+/* line 131, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category h2 {
+  margin-bottom: 25px;
+}
+/* line 135, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .col-sm-3 {
+  margin: 15px 0;
+}
+/* line 139, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block {
+  border: 2px solid #3B93A3;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px #3B93A3 inset;
+  display: block;
+  padding-bottom: 15px;
+}
+/* line 146, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  color: #3B93A3;
+}
+/* line 154, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block img {
+  width: 100%;
+}
+/* line 158, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block p {
+  text-decoration: none;
+  color: #555;
+}
+/* line 163, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category .product-block .product-image {
+  height: 140px;
+}
+/* line 1, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 5, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 11, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 18, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 28, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 6, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/users.css.scss */
+#signup {
+  width: 50%;
+  text-align: left;
+  margin: auto;
+  padding-top: 60px;
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 13, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/users.css.scss */
+#signup h1 {
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #3B93A3;
+  font-weight: bold;
+}
+/* line 20, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/users.css.scss */
+#signup input {
+  display: block;
+  min-width: 300px;
+  margin-left: auto;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+/* line 30, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/users.css.scss */
+#signup .button-container {
+  text-align: center;
+}
+/* line 34, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/users.css.scss */
+#signup .submitbtn {
+  color: #3B93A3;
+  display: inline-block;
+  background: #eee;
+  border: 2px solid #ddd;
+  padding: 10px 0;
+  font-family: 'Open Sans Condensed',sans-serif;
+  font-weight: bold;
+  margin-top: 40px;
+  font-size: 18px;
+  cursor: pointer;
+}
+/* line 47, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/users.css.scss */
+#signup .submitbtn:hover {
+  opacity: .5;
+}
