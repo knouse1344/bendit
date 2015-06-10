@@ -2,6 +2,12 @@ Bendit::Application.routes.draw do
   get "sessions/new"
   get "users/new"
 
+  resources :products do
+    member do
+      put :analytics
+    end
+  end
+
   resources :categories
   resources :products
   resources :users

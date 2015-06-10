@@ -10,6 +10,17 @@ class ProductsController < ApplicationController
   def show
   end
 
+  def analytics
+    @product = Product.find(params[:id])
+    if @product.views == nil
+      @product.views = 1
+    else
+      @product.views += 1
+    end
+    @product.save
+    redirect_to @product.product_url, notice: "Thanks!"
+  end
+
   # GET /products/new
   def new
     @product = Product.new
