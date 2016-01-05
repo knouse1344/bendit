@@ -842,10 +842,16 @@ footer .copyright {
   margin-bottom: 25px;
 }
 /* line 135, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+.product-category h3 {
+  font-size: 1.25em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+/* line 141, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
 .product-category .col-sm-3 {
   margin: 15px 0;
 }
-/* line 139, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+/* line 145, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
 .product-category .product-block {
   border: 2px solid #3B93A3;
   border-radius: 8px;
@@ -853,7 +859,7 @@ footer .copyright {
   display: block;
   padding-bottom: 15px;
 }
-/* line 146, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+/* line 152, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
 .product-category .product-block h3 {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -861,16 +867,16 @@ footer .copyright {
   height: 40px;
   color: #3B93A3;
 }
-/* line 154, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+/* line 160, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
 .product-category .product-block img {
   width: 100%;
 }
-/* line 158, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+/* line 164, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
 .product-category .product-block p {
   text-decoration: none;
   color: #555;
 }
-/* line 163, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
+/* line 169, /Users/Bryan/Desktop/projects/bendit/app/assets/stylesheets/products.css.scss */
 .product-category .product-block .product-image {
   height: 140px;
 }
