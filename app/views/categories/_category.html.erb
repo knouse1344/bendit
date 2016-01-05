@@ -2,9 +2,10 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h2><%= category.cat_name %></h2>
-			<% if category.cat_name.downcase == "toothpaste options" %>
+			<%= category.id %>
+			<% if category.id == "9" %>
 				<h3><a href="/1015_focus_on_toothpaste.pdf" target="_blank">Focus on Toothpaste</a>, Reprinted with permission. <em>"Dimensions of Dental Hygiene", 2015</em></h3>
-			<% elsif category.cat_name.downcase == "mouth rinses" %>
+			<% elsif category.id == "mouth rinses & moistening gels" %>
 				<h3><a href="/focus_on_mouthrinses_0415.pdf" target="_blank">Focus on Mouth Rinses</a>, Reprinted with permission. <em>"Dimensions of Dental Hygiene", 2015</em></h3>
 			<% end %>
 		</div>
