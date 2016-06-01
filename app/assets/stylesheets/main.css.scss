@@ -73,6 +73,11 @@
 	.image_box {
 		background: #4CAFAC;
 		padding: 25px;
+
+		img {
+			display: block;
+			width: 100%;
+		}
 	}
 
 	#introduction {
@@ -415,7 +420,7 @@
 		margin-top: 40px;
 		display: inline-block;
 		padding: 15px;
-		width: 30%;
+		width: 40%;
 		border: 1px solid #3B93A3;
 	}
 
@@ -449,7 +454,7 @@
 		line-height: 28px;
 		color: #3B93A3;
 		font-family: 'Lato', sans-serif;
-		width: 65%;
+		width: 55%;
 		float: right;
 		margin-top: 50px;
 	}
