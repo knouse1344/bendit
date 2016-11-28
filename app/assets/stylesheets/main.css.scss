@@ -50,7 +50,7 @@
 		border-top: 1px solid #4CAFAC;
 		padding-top: 15px;
 		vertical-align: top;
-		display: inline-block;
+		display: block;
 		text-align: left;
 		color: #777;
 		line-height: 30px;
@@ -58,6 +58,11 @@
 		font-size: 20px;
 		font-family: 'Lato', sans-serif;
 		font-weight: 300;
+
+		a {
+			display: inline-block;
+			margin-bottom: 1em;
+		}
 
 		.signature {
 			font-style: italic;
@@ -104,7 +109,7 @@
 	}
 
 	#newcourse {
-		margin-top: 5em;
+		margin-top: 3em;
 
 		.description {
 			
