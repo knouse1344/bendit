@@ -1,0 +1,55 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#articles {
+
+	.delete {
+		background: #fff;
+		color: #f33;
+		text-decoration: none;
+		display: inline-block;
+		margin-bottom: 2em;
+		padding: .35em 1.5em;
+		border: 2px solid #f33;
+		font-size: 1em;
+	}
+
+	.delete:hover {
+		background: #f33;
+		color: #fff;
+		border: 2px solid #f33;
+	}
+
+	form {
+		width: auto;
+		max-width: 40em;
+		margin: auto;
+		padding: 2em 0;
+		font-family: 'Lato', sans-serif;
+
+		.form-control {
+			margin-bottom: 1.5em;
+		}
+
+		.submit {
+			border: 2px solid #ccc;
+			outline: 0;
+			background: transparent;
+			box-shadow: 0 0 0;
+			font-weight: 600;
+			margin-top: 1.5em;
+			padding: .5em 1.5em;
+			display: inline-block;
+			color: #999;
+		}
+
+		.submit:hover {
+			background: #3B93A3;
+			color: #fff;
+			border: 2px solid #3B93A3;
+		}
+	}
+}

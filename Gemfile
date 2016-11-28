@@ -44,3 +44,8 @@ gem 'rails_12factor', group: :production
 # gem 'debugger', group: [:development, :test]
 
 gem 'sitemap_generator'
+
+gem 'puma'
+gem 'carrierwave'
+gem 'mini_magick'
+gem "fog"

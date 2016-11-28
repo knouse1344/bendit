@@ -1,5 +1,23 @@
 <div id="articles">
 	<div class="title_outer"><h1>Published Articles</h1></div>
+	<% if signed_in? %>
+		<%= form_for @newarticle do |a| %>
+
+			<h3>Add a new article</h3>
+
+			<%= a.label "Title" %>
+			<%= a.text_field :title, class: "form-control", placeholder: "Article Title" %>
+
+			<%= a.label "URL Link" %>
+			<%= a.text_field :link, class: "form-control", placeholder: "http://www.example.com" %>
+
+			<%= a.label "Image" %>
+			<%= a.file_field :image, :onchange =>"validateFiles(this);", class: "file-input" %>
+
+			<%= a.submit class: "submit" %>
+		<% end %>
+	<% end %>
+	<%= render @articles %>
 	<div class="article-item">
 		<a target="_blank" href="/judybendit_instrument_ofthemonth_feb2016.pdf"><img src="/assets/article_bendit_dressingpliers.jpg" /></a>
 		<a target="_blank" href="/judybendit_instrument_ofthemonth_feb2016.pdf">Why it pays to invest in your instruments.</a>

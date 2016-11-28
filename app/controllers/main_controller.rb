@@ -10,6 +10,8 @@ class MainController < ApplicationController
   end
 
   def articles
+    @articles = Article.all.order(created_at: :desc)
+  	@newarticle = Article.new
   end
 
 end

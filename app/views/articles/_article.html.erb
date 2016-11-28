@@ -1,0 +1,9 @@
+<div class="article-item">
+	<a target="_blank" href="<%= article.link %>">
+		<img src="<%= article.image.to_s %>" />
+	</a>
+	<% if signed_in? %>
+		<%= link_to "Delete Article", article, method: :delete, data: { confirm: "You are about to delete this article, are you sure?" }, class: "delete" %>
+	<% end %>
+	<a target="_blank" href="<%= article.link %>"><%= article.title %></a>
+</div>
