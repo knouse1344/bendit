@@ -19,7 +19,7 @@ Category.create([
 	{cat_name: 'Toothpaste Options'},
 	{cat_name: 'Mouth Rinses'},
 
-	])
+])
 
 Product.create([
 		{title: 'Sidekick', product_img_url: '/assets/products/140_sidekick.jpg', product_url: 'http://www.hu-friedy.com/innovation/innovation.aspx?alias=sidekick', category_id: '1'},

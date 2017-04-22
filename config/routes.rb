@@ -7,6 +7,11 @@ Bendit::Application.routes.draw do
       put :analytics
     end
   end
+  resources :products do
+    member do
+      put :resetcount
+    end
+  end
 
   resources :categories
   resources :products

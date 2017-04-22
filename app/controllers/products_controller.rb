@@ -18,7 +18,14 @@ class ProductsController < ApplicationController
       @product.views += 1
     end
     @product.save
-    redirect_to @product.product_url, notice: "Thanks!"
+    redirect_to @product.product_url
+  end
+
+  def resetcount
+    @product = Product.find(params[:id])
+    @product.views = 0
+    @product.save
+    redirect_to "/main/products"
   end
 
   # GET /products/new

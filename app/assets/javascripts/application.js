@@ -19,6 +19,17 @@
 
 $(document).ready(function() {
 
+
+  // // Login ESC Click Event
+
+  $(document).keydown(function(e) {
+
+    if(e.keyCode == 27) {
+      window.location.href = "/signin";
+    }
+  });
+
+
 })
 
 

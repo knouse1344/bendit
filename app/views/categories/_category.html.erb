@@ -18,12 +18,24 @@
 		<div class="col-sm-12">
 			<% category.products.sort.each do |p| %>
 				<div class="col-sm-3">
-					<a rel="nofollow" data-method="put" href="/products/<%= p.id %>/analytics" class="button product-block col-sm-10 col-sm-offset-1">
-						<h3><%= p.title %> <% if signed_in? %>Views:  <% if p.views == nil %>0<% end %><%= p.views %> <% end %></h3>
+					<a rel="nofollow" data-method="put" href="/products/<%= p.id %>/analytics" class="button product-block">
+						<h3><%= p.title %></h3>
 						<div class="product-image" style="background: url('<%= p.product_img_url %>'); background-size: contain; background-repeat: no-repeat; background-position: center;"> </div>
 					</a>
-					<% if signed_in? %>	        
-				        <a href="/products/<%= p.id %>/edit">EDIT</a>
+					<% if signed_in? %>
+						<div class="admin">
+							<div class="row">
+								<div class="col-sm-12">
+									<p>Views:  <% if p.views == nil %>0<% else %><%= p.views %><% end %> &ensp; <a data-method="put" href="/products/<%= p.id %>/resetcount"><i class="fa fa-repeat"></i></a></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+						    	    <a href="/products/<%= p.id %>/edit">Edit</a>&ensp; | &ensp;
+						        	<%= link_to "Delete", p, method: :delete, data: { confirm: "You are about to delete this product, are you sure?" }, class: "delete" %>
+							    </div>
+							</div>
+						</div>
 				    <% end %>	
 				</div>
 			<% end %>
