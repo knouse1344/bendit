@@ -1,8 +1,11 @@
 <div id="data-index" class="container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-4 col-sm-offset-2">
       <h1 class="float-left">Listing products</h1>
+    </div>
+    <div class="col-sm-4">
       <%= link_to 'New Product', new_product_path, class: "button button-submit" %>
+      <a class="button button-submit" data-method="put" href="/products/1/resetallviews">Reset All View Counters</a>
     </div>
     <div class="col-sm-8 col-sm-offset-2">
 
@@ -12,7 +15,8 @@
         <thead>
           <tr>
             <th>Title</th>
-            <th></th>
+            <th>Category</th>
+            <th>Views</th>
             <th></th>
             <th></th>
             <th></th>
@@ -24,6 +28,7 @@
             <tr>
               <td class="col-name"><%= product.title %></td>
               <td class="col-desc"><%= product.category.cat_name %></td>
+              <td class="col-desc"><%= product.views.to_i %></td>
               <td><%= link_to 'View', product %></td>
               <td><%= link_to 'Edit', edit_product_path(product) %></td>
               <td><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

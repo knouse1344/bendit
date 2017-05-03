@@ -28,6 +28,15 @@ class ProductsController < ApplicationController
     redirect_to "/main/products"
   end
 
+  def resetallviews
+    @products = Product.all
+    @products.each do |p|
+      p.views = 0
+      p.save!
+    end
+    redirect_to "/products"
+  end
+
   # GET /products/new
   def new
     @product = Product.new

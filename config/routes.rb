@@ -12,6 +12,11 @@ Bendit::Application.routes.draw do
       put :resetcount
     end
   end
+  resources :products do
+    member do
+      put :resetallviews
+    end
+  end
 
   resources :categories
   resources :products
