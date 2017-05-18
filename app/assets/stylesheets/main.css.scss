@@ -152,11 +152,21 @@
 		}
 	}
 
+}
 
-	.edit_homepage {
-		display: block;
+
+.edit_homepage {
+	display: block;
+
+	input {
+		display: none;
+	}
+
+	.file-input {
+		display: none;
 	}
 }
+
 
 /*  Course Offerings Page Styling   */
 

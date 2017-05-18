@@ -1,61 +1,24 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<div id="index">
-	<%= @homepage.content.html_safe %>
-
-	<h1 class="heading">Welcome to my website<a target="_blank" href="https://www.facebook.com/JudyBenditEducates/">Like me on Facebook!<i class="fa fa-facebook-square"></i></a></h1>
-	<div id="introduction">
-		<div class="image_outer_box"><div class="image_box"><img class="imageone" src="/assets/judy_reduced.jpg" /></div></div>
-		<div class="intro-description">
-			<p>
-			Here you will find my calender for upcoming programs, all my course offerings and links to sites I think are important.   If you have recently attended one of my programs and have questions or comments, please go to "contact us" and I will respond as quickly as possible.<br><br><span class="signature">-Judy</span></p><br><br>
-
-			<div class="desc-top-speaker"><b><a href="http://www.dentistrytoday.com/component/k2/item/568-honoring-dentistry-today-s-leaders-in-ce" target="_blank">Dentistry Today Top Speaker</b><br>As seen in the December issue of Dentistry Today 2009-2017; Annual Leaders in CE</a></div>
-			<img width="200px" src="/assets/2015_dentistrytoday.jpg" />
-		</div>
-	</div>
-	<div id="newcourse">
-		<div class="description">
-			<h3>Interview: New Material Arrests Decay</h3>
-			<a href="http://www.dentistrytoday.com/videos/player/The-Wednesday-Watch/interview-new-material-arrests-decay" target="_blank">http://www.dentistrytoday.com/videos/player/The-Wednesday-Watch/interview-new-material-arrests-decay</a>
-			<h3>Judy Bendit, RDH BS Presents The JawDropper At Hinman 2016</h3>
-			<a href="https://thejawdropper.com/judy-bendit-rdh-bs-talks-jawdropper/" target="_blank">https://thejawdropper.com/judy-bendit-rdh-bs-talks-jawdropper/</a>
-		</div>
-	</div>
-	<div id="newcourse">
-		<div class="description">
-			<h3>Check out the online course:  Retipping Hand Instruments: The Myths</h3>
-			<p>
-				This course will define the word "retipping" and take a closer look at the steps involved in retipping hand instruments. Key features in the original manufacturing process will be described along the contrasting process of retipping instruments. This course will also explain the potential risks and costs associated with retipped instruments.
-			</p>
-			<p>
-				You may find more information, a syllabus, and sign up for the course here:  <a target="_blank" href=
-				"http://www.friendsofhu-friedy.com/education/RetippingHandInstrumentsTheMyths.asp">http://www.friendsofhu-friedy.com/education/RetippingHandInstrumentsTheMyths.asp</a>
-			</p>
-		</div>
-	</div>
-	<div id="information">
-		<div class="description">
-			<p>My educational programs are designed for Dentists and Hygienists. They are over-the-shoulder hands-on workshops.</br></br>I have spoken at over 250 dental and hygiene meetings around the United States.  The list includes Yankee Dental Congress, Hinman, Chicago Dental, California Dental Association, Florida National Dental Convention, Texas Dental Association, Greater New York Meeting, Ohio Dental Association, RDH Under one Roof, ADHA Lifelong Learning, as well as many Dental Hygiene components, Hygiene/Dental School alumni events, and dealer sponsored programs.</p>
-		</div>
-		<div class="image_outer_box"><div class="image_box"><img class="imagetwo" src="/assets/bendit_home01.jpg" /></div></div>
-	</div>
-	<div id="article">
-		<a target="_blank" href="http://www.rdhmag.com/display_article/373506/56/none/none/Feat/Magnets-in-dental-chairs"><img class="imagethree" src="/assets/135_th_332312.jpg" /></a>
-		<div class="description">
-			<p>View my most recent article on <a target="_blank" href="http://www.rdhmag.com/display_article/373506/56/none/none/Feat/Magnets-in-dental-chairs">Warning for Patients with Pacemakers sitting in your Dental Chair with the Magnetic Headrest."</a></p>
-		</div>
-	</div>
-</div>
-
 <% if signed_in? %>
 	<%= form_for @homepage do |h| %>
-		<%= h.text_field :content, id: "pageContent", class: "form-control" %>
+		<div id="index">
+			<%= @homepage.content.html_safe %>
+		</div>
+
+		<%= h.text_field :content, id: "pageContent", class: "form-control homepageinput" %>
 		<%= h.file_field :imageone, :onchange =>"validateFiles(this);", class: "imageoneInput file-input" %>
 		<%= h.file_field :imagetwo, :onchange =>"validateFiles(this);", class: "imagetwoInput file-input" %>
 		<%= h.file_field :imagethree, :onchange =>"validateFiles(this);", class: "imagethreeInput file-input" %>
 	<% end %>
+<% else %>
+
+	<div id="index">
+		<%= @homepage.content.html_safe %>		
+	</div>
+
 <% end %>
+
 
 <script>
 
@@ -79,3 +42,48 @@
 	$(".imagethree").attr("src", img03)
 
 </script>
+
+<!-- 
+<h1 class="heading">Welcome to my website<a target="_blank" href="https://www.facebook.com/JudyBenditEducates/">Like me on Facebook!<i class="fa fa-facebook-square"></i></a></h1>
+<div id="introduction">
+	<div class="image_outer_box"><div class="image_box"><img class="imageone" src="/assets/judy_reduced.jpg" /></div></div>
+	<div class="intro-description">
+		<p>
+		Here you will find my calender for upcoming programs, all my course offerings and links to sites I think are important.   If you have recently attended one of my programs and have questions or comments, please go to "contact us" and I will respond as quickly as possible.<br><br><span class="signature">-Judy</span></p><br><br>
+
+		<div class="desc-top-speaker"><b><a href="http://www.dentistrytoday.com/component/k2/item/568-honoring-dentistry-today-s-leaders-in-ce" target="_blank">Dentistry Today Top Speaker</b><br>As seen in the December issue of Dentistry Today 2009-2017; Annual Leaders in CE</a></div>
+		<img width="200px" src="/assets/2015_dentistrytoday.jpg" />
+	</div>
+</div>
+<div id="newcourse">
+	<div class="description">
+		<h3>Interview: New Material Arrests Decay</h3>
+		<a href="http://www.dentistrytoday.com/videos/player/The-Wednesday-Watch/interview-new-material-arrests-decay" target="_blank">http://www.dentistrytoday.com/videos/player/The-Wednesday-Watch/interview-new-material-arrests-decay</a>
+		<h3>Judy Bendit, RDH BS Presents The JawDropper At Hinman 2016</h3>
+		<a href="https://thejawdropper.com/judy-bendit-rdh-bs-talks-jawdropper/" target="_blank">https://thejawdropper.com/judy-bendit-rdh-bs-talks-jawdropper/</a>
+	</div>
+</div>
+<div id="newcourse">
+	<div class="description">
+		<h3>Check out the online course:  Retipping Hand Instruments: The Myths</h3>
+		<p>
+			This course will define the word "retipping" and take a closer look at the steps involved in retipping hand instruments. Key features in the original manufacturing process will be described along the contrasting process of retipping instruments. This course will also explain the potential risks and costs associated with retipped instruments.
+		</p>
+		<p>
+			You may find more information, a syllabus, and sign up for the course here:  <a target="_blank" href=
+			"http://www.friendsofhu-friedy.com/education/RetippingHandInstrumentsTheMyths.asp">http://www.friendsofhu-friedy.com/education/RetippingHandInstrumentsTheMyths.asp</a>
+		</p>
+	</div>
+</div>
+<div id="information">
+	<div class="description">
+		<p>My educational programs are designed for Dentists and Hygienists. They are over-the-shoulder hands-on workshops.</br></br>I have spoken at over 250 dental and hygiene meetings around the United States.  The list includes Yankee Dental Congress, Hinman, Chicago Dental, California Dental Association, Florida National Dental Convention, Texas Dental Association, Greater New York Meeting, Ohio Dental Association, RDH Under one Roof, ADHA Lifelong Learning, as well as many Dental Hygiene components, Hygiene/Dental School alumni events, and dealer sponsored programs.</p>
+	</div>
+	<div class="image_outer_box"><div class="image_box"><img class="imagetwo" src="/assets/bendit_home01.jpg" /></div></div>
+</div>
+<div id="article">
+	<img class="imagethree" src="/assets/135_th_332312.jpg" />
+	<div class="description">
+		<p>View my most recent article on <a target="_blank" href="http://www.rdhmag.com/display_article/373506/56/none/none/Feat/Magnets-in-dental-chairs">Warning for Patients with Pacemakers sitting in your Dental Chair with the Magnetic Headrest."</a></p>
+	</div>
+</div> -->

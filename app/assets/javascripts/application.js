@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   // Home page html
   var indexHtml;
-
+  var saveBtn = $(".admin-link.save")
 
   // // Login ESC Click Event
 
@@ -53,10 +53,6 @@ $(document).ready(function() {
     // Check if we're logged in
     if (typeof onAdmin != "undefined") {
 
-      // Get HTML
-      indexHtml = $("#index").html()
-      $("#pageContent").val(indexHtml)
-
       $("h1").attr("contenteditable", "true")
       $("h2").attr("contenteditable", "true")
       $("h3").attr("contenteditable", "true")
@@ -77,6 +73,20 @@ $(document).ready(function() {
       })
     }
   }
+
+
+  // Save Page
+  saveBtn.on("click", function() {
+
+    // If we're on index, route proper content
+    if (onIndex == true) {
+      // Get HTML
+      indexHtml = $("#index").html()
+      $("#pageContent").val(indexHtml)
+    }
+    $(currentForm).submit()
+  })
+
 
 
 })
