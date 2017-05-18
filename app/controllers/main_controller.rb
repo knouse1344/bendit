@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   def index
+    @homepage = Homepage.first
   end
 
   def about

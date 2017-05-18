@@ -20,6 +20,10 @@
 $(document).ready(function() {
 
 
+  // Home page html
+  var indexHtml;
+
+
   // // Login ESC Click Event
 
   $(document).keydown(function(e) {
@@ -28,6 +32,51 @@ $(document).ready(function() {
       window.location.href = "/signin";
     }
   });
+
+
+
+  // Set the correct form
+  var currentForm = false
+
+  // Introduction edit form selection
+  $(".edit_homepage").on("click", function() {
+    currentForm = $(this)
+  })
+
+  // Event edit image form on selection
+  $(".edit_homepage .file-input").change(function() { this.form.submit(); });
+
+
+  // Build CMS on index page if admin is logged in
+  if (typeof onIndex != "undefined") {
+
+    // Check if we're logged in
+    if (typeof onAdmin != "undefined") {
+
+      // Get HTML
+      indexHtml = $("#index").html()
+      $("#pageContent").val(indexHtml)
+
+      $("h1").attr("contenteditable", "true")
+      $("h2").attr("contenteditable", "true")
+      $("h3").attr("contenteditable", "true")
+      $("h4").attr("contenteditable", "true")
+      $("h5").attr("contenteditable", "true")
+      $("p").attr("contenteditable", "true")
+
+      $("#index img").on("click", function() {
+
+        // Find out what image we clicked on
+        if ($(this).hasClass("imageone")) {
+          $(".imageoneInput").click()
+        } else if ($(this).hasClass("imagetwo")) {
+          $(".imagetwoInput").click()
+        } else if ($(this).hasClass("imagethree")) {
+          $(".imagethreeInput").click()
+        }
+      })
+    }
+  }
 
 
 })

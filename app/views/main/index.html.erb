@@ -1,11 +1,15 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <div id="index">
-	<div class="heading">Welcome to my website<a target="_blank" href="https://www.facebook.com/JudyBenditEducates/">Like me on Facebook!<i class="fa fa-facebook-square"></i></a></div>
+	<%= @homepage.content.html_safe %>
+
+	<h1 class="heading">Welcome to my website<a target="_blank" href="https://www.facebook.com/JudyBenditEducates/">Like me on Facebook!<i class="fa fa-facebook-square"></i></a></h1>
 	<div id="introduction">
-		<div class="image_outer_box"><div class="image_box"><img src="/assets/judy_reduced.jpg" /></div></div>
+		<div class="image_outer_box"><div class="image_box"><img class="imageone" src="/assets/judy_reduced.jpg" /></div></div>
 		<div class="intro-description">
-			Here you will find my calender for upcoming programs, all my course offerings and links to sites I think are important.   If you have recently attended one of my programs and have questions or comments, please go to "contact us" and I will respond as quickly as possible.</br></br><span class="signature">-Judy</span><br><br><br><br>
+			<p>
+			Here you will find my calender for upcoming programs, all my course offerings and links to sites I think are important.   If you have recently attended one of my programs and have questions or comments, please go to "contact us" and I will respond as quickly as possible.<br><br><span class="signature">-Judy</span></p><br><br>
+
 			<div class="desc-top-speaker"><b><a href="http://www.dentistrytoday.com/component/k2/item/568-honoring-dentistry-today-s-leaders-in-ce" target="_blank">Dentistry Today Top Speaker</b><br>As seen in the December issue of Dentistry Today 2009-2017; Annual Leaders in CE</a></div>
 			<img width="200px" src="/assets/2015_dentistrytoday.jpg" />
 		</div>
@@ -32,14 +36,46 @@
 	</div>
 	<div id="information">
 		<div class="description">
-			My educational programs are designed for Dentists and Hygienists. They are over-the-shoulder hands-on workshops.</br></br>I have spoken at over 250 dental and hygiene meetings around the United States.  The list includes Yankee Dental Congress, Hinman, Chicago Dental, California Dental Association, Florida National Dental Convention, Texas Dental Association, Greater New York Meeting, Ohio Dental Association, RDH Under one Roof, ADHA Lifelong Learning, as well as many Dental Hygiene components, Hygiene/Dental School alumni events, and dealer sponsored programs.
+			<p>My educational programs are designed for Dentists and Hygienists. They are over-the-shoulder hands-on workshops.</br></br>I have spoken at over 250 dental and hygiene meetings around the United States.  The list includes Yankee Dental Congress, Hinman, Chicago Dental, California Dental Association, Florida National Dental Convention, Texas Dental Association, Greater New York Meeting, Ohio Dental Association, RDH Under one Roof, ADHA Lifelong Learning, as well as many Dental Hygiene components, Hygiene/Dental School alumni events, and dealer sponsored programs.</p>
 		</div>
-		<div class="image_outer_box"><div class="image_box"><img src="/assets/bendit_home01.jpg" /></div></div>
+		<div class="image_outer_box"><div class="image_box"><img class="imagetwo" src="/assets/bendit_home01.jpg" /></div></div>
 	</div>
 	<div id="article">
-		<a target="_blank" href="http://www.rdhmag.com/display_article/373506/56/none/none/Feat/Magnets-in-dental-chairs"><img src="/assets/135_th_332312.jpg" /></a>
+		<a target="_blank" href="http://www.rdhmag.com/display_article/373506/56/none/none/Feat/Magnets-in-dental-chairs"><img class="imagethree" src="/assets/135_th_332312.jpg" /></a>
 		<div class="description">
-			View my most recent article on <a target="_blank" href="http://www.rdhmag.com/display_article/373506/56/none/none/Feat/Magnets-in-dental-chairs">Warning for Patients with Pacemakers sitting in your Dental Chair with the Magnetic Headrest."</a>
+			<p>View my most recent article on <a target="_blank" href="http://www.rdhmag.com/display_article/373506/56/none/none/Feat/Magnets-in-dental-chairs">Warning for Patients with Pacemakers sitting in your Dental Chair with the Magnetic Headrest."</a></p>
 		</div>
 	</div>
 </div>
+
+<% if signed_in? %>
+	<%= form_for @homepage do |h| %>
+		<%= h.text_field :content, id: "pageContent", class: "form-control" %>
+		<%= h.file_field :imageone, :onchange =>"validateFiles(this);", class: "imageoneInput file-input" %>
+		<%= h.file_field :imagetwo, :onchange =>"validateFiles(this);", class: "imagetwoInput file-input" %>
+		<%= h.file_field :imagethree, :onchange =>"validateFiles(this);", class: "imagethreeInput file-input" %>
+	<% end %>
+<% end %>
+
+<script>
+
+	var onIndex = true
+
+	<% if signed_in? %>
+		var onAdmin = true
+	<% else %>
+
+	<% end %>
+
+
+	// Set Image Vars
+	var img01 = "<%= @homepage.imageone %>"
+	$(".imageone").attr("src", img01)
+
+	var img02 = "<%= @homepage.imagetwo %>"
+	$(".imagetwo").attr("src", img02)
+
+	var img03 = "<%= @homepage.imagethree %>"
+	$(".imagethree").attr("src", img03)
+
+</script>
