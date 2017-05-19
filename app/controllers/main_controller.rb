@@ -4,10 +4,19 @@ class MainController < ApplicationController
   end
 
   def about
+    @aboutpage = Aboutpage.first
   end
 
   def products
   	@categories = Category.all
+  end
+
+  def brochures
+    @brochures = Brochure.all
+  end
+
+  def handout
+    @handouts = Handout.all
   end
 
   def articles

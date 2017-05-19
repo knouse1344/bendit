@@ -1,0 +1,9 @@
+<div class="article-item">
+	<% if signed_in? %>
+		<div class="admin">
+		<%= link_to "Delete Handout", handout, method: :delete, data: { confirm: "You are about to delete this handout, are you sure?" }, class: "delete" %>
+		</div>
+	<% end %>
+	<a target="_blank" href="<%= handout.file.to_s %>"><img src="<%= handout.image.to_s %>" /></a>
+	<a target="_blank" href="<%= handout.file.to_s %>"><%= handout.title.to_s %></a>
+</div>

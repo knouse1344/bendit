@@ -1,0 +1,9 @@
+<div class="article-item">
+	<% if signed_in? %>
+		<div class="admin">
+		<%= link_to "Delete Brochure", brochure, method: :delete, data: { confirm: "You are about to delete this brochure, are you sure?" }, class: "delete" %>
+		</div>
+	<% end %>
+	<a target="_blank" href="<%= brochure.file.to_s %>"><img src="<%= brochure.image.to_s %>" /></a>
+	<a target="_blank" href="<%= brochure.file.to_s %>"><%= brochure.title.to_s %></a>
+</div>

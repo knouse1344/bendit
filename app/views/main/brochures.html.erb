@@ -1,5 +1,25 @@
 <div id="articles">
 	<div class="title_outer"><h1>My Brochures</h1></div>
+	<% if signed_in? %>
+		<%= form_for Brochure.new do |b| %>
+
+			<h3>Add a New Brochure</h3>
+
+			<%= b.label "Brochure Title" %>
+			<%= b.text_field :title, class: "form-control" %>
+
+			<%= b.label "Brochure Cover Image" %>
+			<%= b.file_field :image, :onchange =>"validateFiles(this);", class: "file-input" %>
+
+			<%= b.label "Brochure Document (PDF or Other)" %>
+			<%= b.file_field :file, class: "file-input" %>
+
+			<%= b.submit "Submit", class: "button" %>
+		<% end %>
+	<% end %>
+
+	<%= render @brochures %>
+	
 	<div class="article-item">
 		<a target="_blank" href="/Judy_Bendit_Package.pdf"><img src="/assets/brochure_cover.jpg" /></a>
 		<a target="_blank" href="/Judy_Bendit_Package.pdf">General Information</a>

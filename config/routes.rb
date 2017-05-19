@@ -1,4 +1,12 @@
 Bendit::Application.routes.draw do
+  get 'offerings/index'
+
+  get 'handouts/index'
+
+  get 'brochures/index'
+
+  get 'aboutpages/index'
+
   get 'homepages/index'
 
   get "sessions/new"
@@ -25,6 +33,10 @@ Bendit::Application.routes.draw do
   resources :users
   resources :articles
   resources :homepages
+  resources :aboutpages
+  resources :brochures
+  resources :handouts
+  resources :offerings
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signin', to: 'sessions#new', via: 'get'

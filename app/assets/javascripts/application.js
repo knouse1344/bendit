@@ -22,6 +22,7 @@ $(document).ready(function() {
 
   // Home page html
   var indexHtml;
+  var aboutHtml;
   var saveBtn = $(".admin-link.save")
 
   // // Login ESC Click Event
@@ -43,8 +44,18 @@ $(document).ready(function() {
     currentForm = $(this)
   })
 
+  // About page edit form selection
+  $(".edit_aboutpage").on("click", function() {
+    currentForm = $(this)
+  })
+
+
+
   // Event edit image form on selection
   $(".edit_homepage .file-input").change(function() { this.form.submit(); });
+
+  // About edit image form on selection
+  $(".edit_aboutpage .file-input").change(function() { this.form.submit(); });
 
 
   // Build CMS on index page if admin is logged in
@@ -75,14 +86,50 @@ $(document).ready(function() {
   }
 
 
+  // Build CMS on about page if admin is logged in
+  if (typeof onAbout != "undefined") {
+
+    // Check if we're logged in
+    if (typeof onAdmin != "undefined") {
+
+      $("p").attr("contenteditable", "true")
+
+    }
+  }
+
+
+  // Remove cms features if onpublic
+
+  if (typeof onPublic != "undefined") {
+    $("h1").attr("contenteditable", "false")
+    $("h2").attr("contenteditable", "false")
+    $("h3").attr("contenteditable", "false")
+    $("h4").attr("contenteditable", "false")
+    $("h5").attr("contenteditable", "false")
+    $("p").attr("contenteditable", "false")
+
+    $("#index img").on("click", function() {
+
+        // Do nothing
+        
+    })
+  }
+
+
   // Save Page
   saveBtn.on("click", function() {
 
     // If we're on index, route proper content
-    if (onIndex == true) {
+    if (typeof onIndex != "undefined") {
       // Get HTML
       indexHtml = $("#index").html()
       $("#pageContent").val(indexHtml)
+    }
+
+    if (typeof onAbout != "undefined") {
+      // Get HTML
+      aboutHtml = $("#aboutContent").html()
+      $(".contentInput").val(aboutHtml)
     }
     $(currentForm).submit()
   })
@@ -98,7 +145,7 @@ $(document).ready(function() {
 function validateFiles(inputFile) {
   var maxExceededMessage = "This file exceeds the maximum allowed file size (5 MB)";
   var extErrorMessage = "Only image file with extension: .jpg, .jpeg, .gif or .png is allowed";
-  var allowedExtension = ["jpg", "jpeg", "gif", "png"];
+  var allowedExtension = ["jpg", "jpeg", "gif", "png", "pdf"];
   
   var extName;
   var maxFileSize = $(inputFile).data('max-file-size');

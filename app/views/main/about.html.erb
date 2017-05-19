@@ -1,8 +1,42 @@
 <div id="about">
 	<div class="outer"><h1>About Me</h1></div>
-		<div class="image_outer_box"><div class="image_box"><img src="/assets/bendit_about01.jpg" /></div></div>
-		<p>
-			Judy has been invited to present programs at more than 300 dental and hygiene meetings in the United States and Canada. She currently holds an Adjunct Faculty position in the Periodontal Department, Temple-Kornberg School of Dentistry. In addition to speaking, Judy also has written many articles on dental related topics, and is a volunteer for the Global Smile Foundation performing community outreach around the world.<br><br>Following her years of practice as a clinical dental hygienist, Judy served as a Professional Sales Representative for manufacturers of dental products for 12 years. She also served as an educational consultant for several dental manufacturers for the past 15 years. In recognition of her expertise as a presenter, Judy has been recognized for several years as a “Top Leader in Dental Education” by Dentistry Today. She has been a longstanding member of the ADHA and a Distinguished Member of the Academy of Dental Hygiene.
-		</p>
+
+		<% if signed_in? %>
+
+			<%= form_for @aboutpage do |a| %>
+				<div class="image_outer_box">
+					<div class="image_box">
+						<img src="<%= @aboutpage.image.to_s %>" />
+						<%= a.file_field :image, :onchange =>"validateFiles(this);", class: "file-input" %>
+					</div>
+				</div>
+				<p id="aboutContent" contenteditable="true">
+					<%= @aboutpage.content.html_safe %>
+				</p>
+
+				<%= a.text_field :content, class: "contentInput" %>
+			<% end %>
+
+		<% else %>
+
+			<div class="image_outer_box"><div class="image_box"><img src="/assets/bendit_about01.jpg" /></div></div>
+			<p id="aboutContent">
+				<%= @aboutpage.content.html_safe %>
+				Judy has been invited to present programs at more than 300 dental and hygiene meetings in the United States and Canada. She currently holds an Adjunct Faculty position in the Periodontal Department, Temple-Kornberg School of Dentistry. In addition to speaking, Judy also has written many articles on dental related topics, and is a volunteer for the Global Smile Foundation performing community outreach around the world.<br><br>Following her years of practice as a clinical dental hygienist, Judy served as a Professional Sales Representative for manufacturers of dental products for 12 years. She also served as an educational consultant for several dental manufacturers for the past 15 years. In recognition of her expertise as a presenter, Judy has been recognized for several years as a “Top Leader in Dental Education” by Dentistry Today. She has been a longstanding member of the ADHA and a Distinguished Member of the Academy of Dental Hygiene.
+			</p>
+
+		<% end %>
 	</div>
 </div>
+
+<script>
+
+	var onAbout = true
+
+	<% if signed_in? %>
+		var onAdmin = true
+	<% else %>
+		var onPublic = true
+	<% end %>
+
+</script>

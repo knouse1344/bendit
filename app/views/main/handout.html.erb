@@ -1,9 +1,25 @@
 <div id="articles">
 	<div class="title_outer"><h1>Handouts</h1></div>
-<!--	<div class="article-item">
-		<a href="http://judybendit.com/images/The_Myths_Flyer_2014.pdf"><img src="http://placehold.it/500x620" /></a>
-		<a href="http://judybendit.com/images/The_Myths_Flyer_2014.pdf">The Myths, Legends, and Realities of OTC's</a>
-	</div> -->
+	<% if signed_in? %>
+		<%= form_for Handout.new do |b| %>
+
+			<h3>Add a New Handout</h3>
+
+			<%= b.label "Handout Title" %>
+			<%= b.text_field :title, class: "form-control" %>
+
+			<%= b.label "Handout Cover Image" %>
+			<%= b.file_field :image, :onchange =>"validateFiles(this);", class: "file-input" %>
+
+			<%= b.label "Handout Document (PDF or Other)" %>
+			<%= b.file_field :file, class: "file-input" %>
+
+			<%= b.submit "Submit", class: "button" %>
+		<% end %>
+	<% end %>
+
+	<%= render @handouts %>
+
 	<div class="article-item">
 		<a target="_blank" href="/Dry_Mouth_Products_JB_2017.pdf"><img src="/assets/dry_mouth_cover.jpg" /></a>
 		<a target="_blank" href="/Dry_Mouth_Products_JB_2017.pdf">Dry Mouth Products 2017</a>
