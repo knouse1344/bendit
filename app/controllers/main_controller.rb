@@ -16,7 +16,7 @@ class MainController < ApplicationController
   end
 
   def handout
-    @handouts = Handout.all
+    @handouts = Handout.all.order(created_at: :desc)
   end
 
   def articles
