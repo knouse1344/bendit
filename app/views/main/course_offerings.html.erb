@@ -18,29 +18,35 @@
 
 	<p class="intro"> Click on a course to see more information</p>
 
-	<div class="item-row">
-		<% @offerings.each do |o| %>
-			<div class="course-item" target="<%= o.id.to_s %>">
-				<% if signed_in? %>
-					<a class="edit" href="/offerings/<%= o.id.to_s %>/edit"><i class="fa fa-pencil"></i></a>
-					<a data-confirm="You are about to delete this course offering, are you sure?" class="delete" rel="nofollow" data-method="delete" class="delete" href="/offerings/<%= o.id.to_s %>"><i class="fa fa-remove"></i></a>
-				<% end %>
-				<span><%= o.title.to_s %></span>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="item-row">
+					<% @offerings.each do |o| %>
+						<div class="course-item" target="<%= o.id.to_s %>">
+							<% if signed_in? %>
+								<a class="edit" href="/offerings/<%= o.id.to_s %>/edit"><i class="fa fa-pencil"></i></a>
+								<a data-confirm="You are about to delete this course offering, are you sure?" class="delete" rel="nofollow" data-method="delete" class="delete" href="/offerings/<%= o.id.to_s %>"><i class="fa fa-remove"></i></a>
+							<% end %>
+							<span><%= o.title.to_s %></span>
+						</div>
+					<% end %>
+				</div>
 			</div>
-		<% end %>
-	</div>
+			<div class="col-sm-8">
+				<div class="info-box">
 
-	<div class="info-box">
-
-		<% @offerings.each do |o| %>
-			<div class="info-text" target="<%= o.id.to_s %>">
-				<div class="class-title"><%= o.title.to_s %></div>
-				<p><%= o.content.html_safe %></p>
-				<br><br>
-				<div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
+					<% @offerings.each do |o| %>
+						<div class="info-text" target="<%= o.id.to_s %>">
+							<div class="class-title"><%= o.title.to_s %></div>
+							<p><%= o.content.html_safe %></p>
+							<br><br>
+							<div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
+						</div>
+					<% end %>
+				</div>
 			</div>
-		<% end %>
-
+		</div>
 	</div>
 </div>
 
@@ -56,7 +62,7 @@
 		$('.info-box p').css('opacity', '0');
 		setTimeout(function() {
 			$('.info-text').css('display', 'none');
-			$('[target="' + targ +'"]').css('display', 'inline-block');
+			$('[target="' + targ +'"]').css('display', 'block');
 			$('[target="' + targ +'"]').css('opacity', '1');
 			$('[target="' + targ +'"] p').css('opacity', '1');
 		}, 100);
