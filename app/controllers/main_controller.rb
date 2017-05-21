@@ -12,11 +12,11 @@ class MainController < ApplicationController
   end
 
   def brochures
-    @brochures = Brochure.all.order(created_at: :desc)
+    @brochures = Brochure.all.order(created_at: :asc)
   end
 
   def handout
-    @handouts = Handout.all.order(created_at: :desc)
+    @handouts = Handout.all.order(created_at: :asc)
   end
 
   def articles
