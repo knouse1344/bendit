@@ -24,4 +24,8 @@ class MainController < ApplicationController
   	@newarticle = Article.new
   end
 
+  def course_offerings
+    @offerings = Offering.all
+  end
+
 end

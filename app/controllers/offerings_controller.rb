@@ -22,7 +22,7 @@ class OfferingsController < ApplicationController
 
     respond_to do |format|
       if @offering.save
-        format.html { redirect_to '/main/offerings', notice: 'Home page created.' }
+        format.html { redirect_to '/main/course_offerings', notice: 'Home page created.' }
         format.json { render action: 'show', status: :created, location: @offering }
       else
         format.html { render action: 'new' }
@@ -36,7 +36,7 @@ class OfferingsController < ApplicationController
     
     respond_to do |format|
       if @offering.update(offering_params)
-        format.html { redirect_to '/main/offerings', notice: 'Home page updated.' }
+        format.html { redirect_to '/main/course_offerings', notice: 'Home page updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -49,7 +49,7 @@ class OfferingsController < ApplicationController
     @offering = Offering.find(params[:id])
     @offering.destroy
     respond_to do |format|
-      format.html { redirect_to "/main/offerings", notice: 'Home page destroyed.' }
+      format.html { redirect_to "/main/course_offerings", notice: 'Home page destroyed.' }
       format.json { head :no_content }
     end
   end

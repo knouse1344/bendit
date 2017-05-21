@@ -1,6 +1,33 @@
 <div id="course_offerings">
 	<div class="outer"><h1>Course Offerings</h1></div>
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<%= form_for Offering.new do |o| %>
+				<h3>Add a New Course Offering</h3>
+				<%= o.label "Title" %>
+				<%= o.text_field :title, class: "form-control" %>
+				<%= o.label "Content" %>
+				<%= o.text_area :content, class: "form-control" %>
+				<%= o.submit "Submit", class: "button" %>
+			<% end %>
+		</div>
+	</div>
 	<p class="intro"> Click on a course to see more information</p>
+
+
+
+	<div class="item-row">
+		<% @offerings.each do |o| %>
+			<div class="course-item" target="<%= o.id.to_s %>"><span><%= o.title.to_s %></span></div>
+		<% end %>
+	</div>
+
+
+
+
+
+
+
 	<div class="item-row">
 		<div class="course-item sharpen-up"><span>Smarten up and sharpen up!</span></div>
 		<div class="course-item ultrasonics-box"><span>The Heart and soul of ultrasonics</span></div>
@@ -17,47 +44,59 @@
 		<div class="course-item judy-tim"><span>Collaborative Work:  Judy & Tim</span></div>
 	</div>
 	<div class="info-box">
+
+		<% @offerings.each do |o| %>
+			<div class="info-text" target="<%= o.id.to_s %>">
+				<div class="class-title"><%= o.title.to_s %></div>
+				<p><%= o.content.html_safe %></p>
+				<br><br>
+				<div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
+			</div>
+		<% end %>
+
+
 		<div class="info-text sharpen-text">
 			<div class="class-title">Smarten Up and Sharpen Up Course Description</div>
-			Why is it that no one ever wants to sharpen hygiene instruments?  But we want them to have that new, just "out-of-the-package" feel? This 3 hour hands-on workshop will demonstrate how easily and effectively you CAN sharpen scalers and cure"es once you find the method that works BEST for YOU. Please join us for a relaxed, informal program that will highlight some of the latest and greatest guides, aids and devices that can help you to achieve sharp cu"ing edges on your instruments every time!<br><br>
-			The participants will learn to:<br><br>
-			Distinguish a "dull" cutting edge from a "sharp" edge.<br>
-			Extend the life of your instruments by maintaining sharp blades with a minimal amount of grinding.<br>
-			Select an appropriate sharpening method for your individual situation.<br>
-			Identify the best time in your busy schedule to sharpen your instruments.<br>
-			Enjoy working with sharp instruments again.
+Why is it that no one ever wants to sharpen hygiene instruments?  But we want them to have that new, just "out-of-the-package" feel? This 3 hour hands-on workshop will demonstrate how easily and effectively you CAN sharpen scalers and cure"es once you find the method that works BEST for YOU. Please join us for a relaxed, informal program that will highlight some of the latest and greatest guides, aids and devices that can help you to achieve sharp cu"ing edges on your instruments every time!<br><br>
+The participants will learn to:<br><br>
+Distinguish a "dull" cutting edge from a "sharp" edge.<br>
+Extend the life of your instruments by maintaining sharp blades with a minimal amount of grinding.<br>
+Select an appropriate sharpening method for your individual situation.<br>
+Identify the best time in your busy schedule to sharpen your instruments.<br>
+Enjoy working with sharp instruments again.
 			<br><br>
 			<div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 		<div class="info-text ultrasonics-text">
 			<div class="class-title">The Heart and Soul of Ultrasonics Course Description</div>
-			Join me for this fast paced half-day "hands-on" workshop that will provide an opportunity for you to ANALYZE and UTILIZE a variety of power scaling inserts. Matching the physical designs of the working ends of the ultrasonic scalers in relation to the specific objectives of the treatment procedure
-			and the morphologic al features of root surfaces will be one of many activity-based exercises. Ergonomic considerations will be an integral consideration as well.<br><br>
-			This fast-paced workshop will include activities involving tac tile sensitivity, root anatomy, care and maintenance, and instrumentation techniques. Guidelines will be offered to aid you in selecting appropriate inserts to enhance the delivery of optimal treatment.<br><br>
-			Upon completion of this workshop, the participant will be able to:
-			<ul>
-				<li>1. Identify the design features of magnetostrictive inserts.</li>
-				<ul>
-					<li>a. Power dispersion</li>
-					<li>b. Tip options</li>
-				</ul>
-				<li>2. Cite the advantages and disadvantages offered by powered scalers in performing general and definitive debridement procedures.</li>
-				<li>3. Examine all the indications and contraindications for using power scalers.</li>
-				<li>4. Selection of appropriate inserts for the clinical treatment.</li>
-				<li>5. Demonstrate the techniques with emphasis on:</li>
-				<ul>
-					<li>a. Grasp</li>
-					<li>b. Fulcrum</li>
-					<li>c . Adaptation</li>
-					<li>d. Angulation</li>
-					<li>e. Stroke Pattern</li>
-					<li>f. Pressure</li>
-				</ul>
-				<li>6. Look at clinical considerations that help facilitate ultrasonic instrumentation:</li>
-				<ul>
-					<li>a. Suction options Pre-procedural Rinses</li>
-					<li>b. Cord Maintenance</li>
-				</ul>
+Join me for this fast paced half-day "hands-on" workshop that will provide an opportunity for you to ANALYZE and UTILIZE a variety of power scaling inserts. Matching the physical designs of the working ends of the ultrasonic scalers in relation to the specific objectives of the treatment procedure
+and the morphologic al features of root surfaces will be one of many activity-based exercises. Ergonomic considerations will be an integral consideration as well.<br><br>
+This fast-paced workshop will include activities involving tac tile sensitivity, root anatomy, care and maintenance, and instrumentation techniques. Guidelines will be offered to aid you in selecting appropriate inserts to enhance the delivery of optimal treatment.<br><br>
+Upon completion of this workshop, the participant will be able to:
+<ul>
+	<li>1. Identify the design features of magnetostrictive inserts.</li>
+	<ul>
+		<li>a. Power dispersion</li>
+		<li>b. Tip options</li>
+	</ul>
+	<li>2. Cite the advantages and disadvantages offered by powered scalers in performing general and definitive debridement procedures.</li>
+	<li>3. Examine all the indications and contraindications for using power scalers.</li>
+	<li>4. Selection of appropriate inserts for the clinical treatment.</li>
+	<li>5. Demonstrate the techniques with emphasis on:</li>
+	<ul>
+		<li>a. Grasp</li>
+		<li>b. Fulcrum</li>
+		<li>c . Adaptation</li>
+		<li>d. Angulation</li>
+		<li>e. Stroke Pattern</li>
+		<li>f. Pressure</li>
+	</ul>
+	<li>6. Look at clinical considerations that help facilitate ultrasonic instrumentation:</li>
+	<ul>
+		<li>a. Suction options Pre-procedural Rinses</li>
+		<li>b. Cord Maintenance</li>
+	</ul>
+</ul>
 			<div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 		<div class="info-text ergonomics-text">
@@ -137,7 +176,20 @@
 <script type="text/javascript">
 
 	$('.course-item').click(function() {
-		// $('.info-box').css('height', '250px');
+		var targ = $(this).attr("target")
+
+		$(".course-item").removeClass("selected")
+		$(".course-item").addClass("not-selected")
+		$(this).removeClass("not-selected")
+		$(this).addClass("selected")
+		$('.info-box p').css('opacity', '0');
+		setTimeout(function() {
+			$('.info-text').css('display', 'none');
+			$('[target="' + targ +'"]').css('display', 'inline-block');
+			$('[target="' + targ +'"]').css('opacity', '1');
+			$('[target="' + targ +'"] p').css('opacity', '1');
+		}, 100);
+
 	});
 
 	$('.ultrasonics-box').click(function() {

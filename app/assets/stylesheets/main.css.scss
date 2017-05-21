@@ -195,6 +195,31 @@
 		margin:0;
 	}
 
+	.new_offering {
+		padding-top: 3em;
+		padding-bottom: 2em;
+
+		h3 {
+			margin: 0 0 .5em;
+		}
+
+		.form-control {
+			margin-bottom: 1.5em;
+		}
+
+		.button {
+			display: inline-block;
+			border: 0;
+			outline: 0;
+			box-shadow: 0 0 0;
+			background: #3B93A3;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 700;
+			padding: .5em 1.5em;
+		}
+	}
+
 	.intro {
 		color: #3B93A3;
 		font-size: 20px;
@@ -219,7 +244,7 @@
 		box-sizing: border-box;
 		display: inline-block;
 		padding: 10px;
-		height: 120px;
+		min-height: 6em;
 		border: 3px solid #3B93A3;
 		margin: 0 1%;
 		-webkit-transition: all .25s ease-in-out;
@@ -229,29 +254,16 @@
 		cursor: pointer;		
 
 		span {
-			font-size: 16px;
-		    line-height: 24px;
+			font-size: 1.15em;
+			line-height: 1.5em;
 			color: #3B93A3;
 			font-family: 'Lato',sans-serif;
-			font-weight: 900;
-			text-transform: uppercase;
+			font-weight: 700;
 		}
 	}
 
 	.selected {
-		vertical-align: top;
-		width: 30%;
-		box-sizing: border-box;
-		padding: 10px;
-		height: 120px;
-		margin: 0 1%;
-		display: inline-block;
 		background: #3B93A3;
-		cursor: pointer;
-		-webkit-transition: all .125s ease-in-out;
-		-moz-transition: all .125s ease-in-out;
-		-o-transition: all .125s ease-in-out;
-		transition: all .125s ease-in-out;
 
 		span {
 			margin:0;
