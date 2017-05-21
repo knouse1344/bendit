@@ -22,7 +22,13 @@
 
 	<div class="item-row">
 		<% @offerings.each do |o| %>
-			<div class="course-item" target="<%= o.id.to_s %>"><span><%= o.title.to_s %></span></div>
+			<div class="course-item" target="<%= o.id.to_s %>">
+				<% if signed_in? %>
+					<a class="edit" href="/offerings/<%= o.id.to_s %>/edit"><i class="fa fa-pencil"></i></a>
+					<a data-confirm="You are about to delete this course offering, are you sure?" class="delete" rel="nofollow" data-method="delete" class="delete" href="/offerings/<%= o.id.to_s %>"><i class="fa fa-remove"></i></a>
+				<% end %>
+				<span><%= o.title.to_s %></span>
+			</div>
 		<% end %>
 	</div>
 
@@ -103,73 +109,73 @@ Upon completion of this workshop, the participant will be able to:
 		</div>
 		<div class="info-text ergonomics-text">
 			<div class="class-title">Ergonomic Advancements in Dentistry Course Description</div>
-			 Let's take a close look at all the ways that you can make your job easier, and then say "Goodbye" to pain with smarter working techniques.   This hands-on half-day workshop will focus on practical principles to enhance your dexterity, preserve your strength, 
-			 and increase your confidence when confronting clinical challenges. Included in the discussion will be your room layout, gloves, instruments, loupes and a lot of other great tips to make your clinical experience more effective.<br><br>
-			 Join us to see things that will make your career better:<br><br>Better Vision...<br><br>Better Access...<br><br>Better Technique...<br><br>Why not take a look?  Let's get ready to position yourself for life!
+Let's take a close look at all the ways that you can make your job easier, and then say "Goodbye" to pain with smarter working techniques.   This hands-on half-day workshop will focus on practical principles to enhance your dexterity, preserve your strength, 
+and increase your confidence when confronting clinical challenges. Included in the discussion will be your room layout, gloves, instruments, loupes and a lot of other great tips to make your clinical experience more effective.<br><br>
+Join us to see things that will make your career better:<br><br>Better Vision...<br><br>Better Access...<br><br>Better Technique...<br><br>Why not take a look?  Let's get ready to position yourself for life!
 			 <div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 		<div class="info-text clinical-text">
 			<div class="class-title">Jazz Up Your Clinical Routine Course Description</div>
-			Jazz up your routine with all the newest products for your hygiene practice. This fun and informal course will review many new concepts for making your hygiene procedures more efficient.<br><br>After this course, you will be able to:<br><br>1. Identify instruments that you want to work with all day, every day<br>2. Strategize plans for the most appropriate instruments for each type of procedure<br>3. Enhance your self-assurance with the knowledge that you've got the latest products.<br><br>
+Jazz up your routine with all the newest products for your hygiene practice. This fun and informal course will review many new concepts for making your hygiene procedures more efficient.<br><br>After this course, you will be able to:<br><br>1. Identify instruments that you want to work with all day, every day<br>2. Strategize plans for the most appropriate instruments for each type of procedure<br>3. Enhance your self-assurance with the knowledge that you've got the latest products.<br><br>
 			<div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 		<div class="info-text chew-on-text">
 			<div class="class-title">Something to Chew on - The Effects of Aging on Oral Health</div>
-			Just like all of us, our patients are advancing in age and are facing some complicated age-related consequences.  Food impactions, expanding restorations, temperature sensitivity, xerostomia, grinding, and erosion are just a few of the many 
-			issues they will face as they grow older. This course looks at the contributing factors that will be affecting our aging patients and provides an opportunity to discuss their personal, and our professional dilemmas. We will chew on the facts and 
-			spit out potential solutions that will help us all age tastefully.<br><br>
+Just like all of us, our patients are advancing in age and are facing some complicated age-related consequences.  Food impactions, expanding restorations, temperature sensitivity, xerostomia, grinding, and erosion are just a few of the many 
+issues they will face as they grow older. This course looks at the contributing factors that will be affecting our aging patients and provides an opportunity to discuss their personal, and our professional dilemmas. We will chew on the facts and 
+spit out potential solutions that will help us all age tastefully.<br><br>
 			<div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 		<div class="info-text otc-text">
 			<div class="class-title">The Myths, Legends, and Realities of OTC Products Course Description</div>
-			You bring the popcorn and I'll bring the entertainment, along with the education. This 3-hour program will explore all the myths, legends and realities of toothbrushes, toothpastes and mouth rinses. We will look at vintage commercials and evaluate how they have shaped our current philosophies and explain why
-			we are so challenged with getting the right products into the hands of our patients. This course will leave you questioning many of the advertisements and making wiser decisions for yourself and your patients.<br><br>
-			Objectives
-			<ul>
-				<li>Look at the trends in marketing and how they effect our own decision making process.</li>
-				<li>Formulate a homecare protocol</li>
-				<li>Evaluate and discuss the science behind many of the OTC products.</li>
-				<li>Determine what toothbrush is best for each patient (manual and electric)</li>
-				<li>Compare and discuss the current rinses available for in office and home use.</li>
-			</ul>
+You bring the popcorn and I'll bring the entertainment, along with the education. This 3-hour program will explore all the myths, legends and realities of toothbrushes, toothpastes and mouth rinses. We will look at vintage commercials and evaluate how they have shaped our current philosophies and explain why
+we are so challenged with getting the right products into the hands of our patients. This course will leave you questioning many of the advertisements and making wiser decisions for yourself and your patients.<br><br>
+Objectives
+<ul>
+	<li>Look at the trends in marketing and how they effect our own decision making process.</li>
+	<li>Formulate a homecare protocol</li>
+	<li>Evaluate and discuss the science behind many of the OTC products.</li>
+	<li>Determine what toothbrush is best for each patient (manual and electric)</li>
+	<li>Compare and discuss the current rinses available for in office and home use.</li>
+</ul>
 			<div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 		<div class="info-text caries-text">
 			<div class="class-title">The 4 C's in Solving the Caries Puzzle Course Description</div>
-			This program introduces a suggested "caries risk assessment" survey to identify individual patient risk level for dental caries. Mapping a treatment plan is only successful when the dental team  understands all factors that influence the caries pattern and prevalence based on medical history,  lifestyle changes, behaviors and disease factors.<br><br>The program will preview several case studies that begin with CAMBRA and design a mapping to incorporate appropriate therapies and patient-applied practices to reverse early carious patterns. In the final segment of this seminar, the participants will all be encouraged to share their successes with all the latest remineralization products and how they plan to improve their day-to-day practice using evidence-based science. This half day program is totally sponsored by Premier.
+This program introduces a suggested "caries risk assessment" survey to identify individual patient risk level for dental caries. Mapping a treatment plan is only successful when the dental team  understands all factors that influence the caries pattern and prevalence based on medical history,  lifestyle changes, behaviors and disease factors.<br><br>The program will preview several case studies that begin with CAMBRA and design a mapping to incorporate appropriate therapies and patient-applied practices to reverse early carious patterns. In the final segment of this seminar, the participants will all be encouraged to share their successes with all the latest remineralization products and how they plan to improve their day-to-day practice using evidence-based science. This half day program is totally sponsored by Premier.
 			<br><br><div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 		<div class="info-text judy-patti-text">
 			<div class="class-title">Collaborative Work:  Judy & Patti</div>
-			<b style="text-transform: uppercase;">Flight Plan: Checklists</b><br>
-			George is your 82 year old patient. His health is complex and he takes 12 medications daily. He keeps his routine hygiene appointments but his dental health is declining. What can we do to help? In this fast-paced all day event, we 
-			will take the best parts of every course you ever attended (lectures, hands-on workshops, brainstorming, face time with manufacturers) to create something new and unique. We use the idea of a flight plan checklist like a pilot uses 
-			and apply it to dentistry. Checklists help us create the most effective flight plan for our patients and can bring about striking improvements in their health.<br><br>
-			A boarding pass moves participants through the day to their connecting flights with vendors travelling with colleagues and a flight bag to experience face-to-face hands-on experiences. They leave with a flight bag full of great ideas, samples, and much more.<br><br>
-			After attending this 6 hour case-based CE program, participants will:<br><br>
-			<ul>
-				<li>Look at clinical concepts of using evidence-based dentistry to guide care</li>
-				<li>Investigate options to decide the best armamentarium</li>
-				<li>Summarize medical necessity narratives to facilitate insurance benefits</li>
-				<li>Tie it all together with checklists that move you beyond your routine</li>
-			</ul>
-			<br>
-			Patti DiGangi RDH, BS and Judy Bendit RDH, BS are the air traffic controllers for this flight. They are national speakers who created and present this one-of-a-kind program including topics from electronic health records, risk assessment,
-			instrumentation, and ergonomics to name a few. They have successfully presented this program across the country since 2010.
+<b style="text-transform: uppercase;">Flight Plan: Checklists</b><br>
+George is your 82 year old patient. His health is complex and he takes 12 medications daily. He keeps his routine hygiene appointments but his dental health is declining. What can we do to help? In this fast-paced all day event, we 
+will take the best parts of every course you ever attended (lectures, hands-on workshops, brainstorming, face time with manufacturers) to create something new and unique. We use the idea of a flight plan checklist like a pilot uses 
+and apply it to dentistry. Checklists help us create the most effective flight plan for our patients and can bring about striking improvements in their health.<br><br>
+A boarding pass moves participants through the day to their connecting flights with vendors travelling with colleagues and a flight bag to experience face-to-face hands-on experiences. They leave with a flight bag full of great ideas, samples, and much more.<br><br>
+After attending this 6 hour case-based CE program, participants will:<br><br>
+<ul>
+<li>Look at clinical concepts of using evidence-based dentistry to guide care</li>
+<li>Investigate options to decide the best armamentarium</li>
+<li>Summarize medical necessity narratives to facilitate insurance benefits</li>
+<li>Tie it all together with checklists that move you beyond your routine</li>
+</ul>
+<br>
+Patti DiGangi RDH, BS and Judy Bendit RDH, BS are the air traffic controllers for this flight. They are national speakers who created and present this one-of-a-kind program including topics from electronic health records, risk assessment,
+instrumentation, and ergonomics to name a few. They have successfully presented this program across the country since 2010.
 			<br><br><div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 		<div class="info-text judy-tim-text">
 			<div class="class-title">Collaborative Work:  Judy & Tim</div>
-			<b style="text-transform: uppercase;">Survival of the Fittest...Get on the ball!</b><br>For years women dental professionals have been constrained by the limitations of their own work environment and the negative effect on their bodies while paying a high price physically. The concept of 
-			caring for our most important instrument, our body, is invaluable and often ignored.<br><br>Is exercise a regular part of your routine? How do you care for your most important instrument? Does fitness affect function? Can a little chairside 
-			prevention enhance your career? Or perhaps save it? Get up to stretch & strengthen during this hands-on workshop. Tim Caruso and Judy Bendit will lead you through a simple series of exercises on an exercise ball, designed specifically for clinicians to 
-			help combat the muscle imbalances that typically plague us in our seated positions. Join this fun and interactive workout that will re-educate your core to maintain correct spinal alignment and proper working postures.<br><br>Co-Sponsored by Posture Perfect Solutions Ltd. all 
-			participants of this lecture receive their very own Evolution Chair, valued at $149.00 to take home with them.<br><br><br><br>
-			<b style="text-transform: uppercase;">150 Years of Modern Dentistry: Have we come a long way baby?</b><br>Dentistry has made many strides in the last 150 years. The evolution of anesthesia, dental techniques, materials, equipment, and our approach to prevention 
-			has come a long way from the days of standing up with a pair of pliers and a can of ether.<br><br>However, daily discomfort continues to be tolerated day in and day out. Pain appears to be an accepted part of the dental professional, and it seems to be 
-			worsening. The patients are pain free but how about the clinician? What has dentistry done about the pain experienced by the practitioner? What have the researchers and manufacturers done to prevent the maladies caused by enthusiastic, over-achieving 
-			professionals? Is it possible for the modern day dental professional to counteract the ill effects of the profession on their bodies by having the right equipment to do the job?<br><br>Join Tim Caruso and Judy Bendit as they explore all the challenges in the dental 
-			office and give you viable options to take back and implement immediately.<br><br>Speakers:<br>Tim Caruso PT, MBA, MS<br>Judy Bendit RDH, BS
+<b style="text-transform: uppercase;">Survival of the Fittest...Get on the ball!</b><br>For years women dental professionals have been constrained by the limitations of their own work environment and the negative effect on their bodies while paying a high price physically. The concept of 
+caring for our most important instrument, our body, is invaluable and often ignored.<br><br>Is exercise a regular part of your routine? How do you care for your most important instrument? Does fitness affect function? Can a little chairside 
+prevention enhance your career? Or perhaps save it? Get up to stretch & strengthen during this hands-on workshop. Tim Caruso and Judy Bendit will lead you through a simple series of exercises on an exercise ball, designed specifically for clinicians to 
+help combat the muscle imbalances that typically plague us in our seated positions. Join this fun and interactive workout that will re-educate your core to maintain correct spinal alignment and proper working postures.<br><br>Co-Sponsored by Posture Perfect Solutions Ltd. all 
+participants of this lecture receive their very own Evolution Chair, valued at $149.00 to take home with them.<br><br><br><br>
+<b style="text-transform: uppercase;">150 Years of Modern Dentistry: Have we come a long way baby?</b><br>Dentistry has made many strides in the last 150 years. The evolution of anesthesia, dental techniques, materials, equipment, and our approach to prevention 
+has come a long way from the days of standing up with a pair of pliers and a can of ether.<br><br>However, daily discomfort continues to be tolerated day in and day out. Pain appears to be an accepted part of the dental professional, and it seems to be 
+worsening. The patients are pain free but how about the clinician? What has dentistry done about the pain experienced by the practitioner? What have the researchers and manufacturers done to prevent the maladies caused by enthusiastic, over-achieving 
+professionals? Is it possible for the modern day dental professional to counteract the ill effects of the profession on their bodies by having the right equipment to do the job?<br><br>Join Tim Caruso and Judy Bendit as they explore all the challenges in the dental 
+office and give you viable options to take back and implement immediately.<br><br>Speakers:<br>Tim Caruso PT, MBA, MS<br>Judy Bendit RDH, BS
 			<br><br><div style="margin-top: 40px; text-align: center;">For further information contact Judy at:<br>Judy@JudyBendit.com or 610-972-2709</div>
 		</div>
 	</div>

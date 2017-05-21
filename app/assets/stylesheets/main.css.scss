@@ -240,6 +240,7 @@
 		vertical-align: top;
 		background: #ebebeb;
 		width: 18%;
+		position: relative;
 		text-align: center;
 		box-sizing: border-box;
 		display: inline-block;
@@ -259,6 +260,33 @@
 			color: #3B93A3;
 			font-family: 'Lato',sans-serif;
 			font-weight: 700;
+		}
+
+		a.edit {
+			position: absolute;
+			left: .5em;
+			top: .5em;
+			display: inline-block;
+			background: #999;
+			color: #fff;
+			padding: .5em .75em;
+			opacity: .7;
+		}
+
+		a.delete {
+			position: absolute;
+			right: .5em;
+			top: .5em;
+			display: inline-block;
+			background: #c00;
+			color: #fff;
+			padding: .5em .75em;
+			opacity: .7;
+			cursor: pointer;
+		}
+
+		a.edit:hover, a.delete:hover {
+			opacity: 1;
 		}
 	}
 

@@ -1,0 +1,7 @@
+<%= form_for @offering do |o| %>
+	<%= o.label "Title" %>
+	<%= o.text_field :title, class: "form-control" %>
+	<%= o.label "Content" %>
+	<%= o.text_area :content, class: "form-control" %>
+	<%= o.submit "Submit", class: "button" %>
+<% end %>
