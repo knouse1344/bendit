@@ -607,11 +607,8 @@
 
 
 #products {
-	width: 90%;
-	max-width: 1200px;
 	padding-top: 40px;
 	padding-bottom: 80px;
-	margin: auto;
 
 	.outer {
 		padding: 15px; 
@@ -636,6 +633,22 @@
 		font-family: 'Lato',sans-serif;
 		color: #3B93A3;
 		margin:30px 0 20px 0;
+	}
+
+	a {
+		position:relative;
+		display: inline-block;
+		padding: 10px 25px 10px 25px;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: 700;
+		color: #3B93A3;
+		font-size: 16px;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	.admin-link {
+		color: #c00;
 	}
 
 	.desc {
