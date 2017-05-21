@@ -1,17 +1,21 @@
 <div id="course_offerings">
 	<div class="outer"><h1>Course Offerings</h1></div>
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2">
-			<%= form_for Offering.new do |o| %>
-				<h3>Add a New Course Offering</h3>
-				<%= o.label "Title" %>
-				<%= o.text_field :title, class: "form-control" %>
-				<%= o.label "Content" %>
-				<%= o.text_area :content, class: "form-control" %>
-				<%= o.submit "Submit", class: "button" %>
-			<% end %>
+
+	<% if signed_in? %>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<%= form_for Offering.new do |o| %>
+					<h3>Add a New Course Offering</h3>
+					<%= o.label "Title" %>
+					<%= o.text_field :title, class: "form-control" %>
+					<%= o.label "Content" %>
+					<%= o.text_area :content, class: "form-control" %>
+					<%= o.submit "Submit", class: "button" %>
+				<% end %>
+			</div>
 		</div>
-	</div>
+	<% end %>
+	
 	<p class="intro"> Click on a course to see more information</p>
 
 
