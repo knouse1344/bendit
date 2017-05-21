@@ -1,3 +1,30 @@
 // Place all the styles related to the Offerings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#offering {
+	padding: 8em 0;
+
+	form {
+
+		.form-control {
+			margin-bottom: 1.5em;
+		}
+
+		textarea {
+			min-height: 10em;
+		}
+
+		.button {
+			display: inline-block;
+			border: 0;
+			outline: 0;
+			box-shadow: 0 0 0;
+			background: #3B93A3;
+			color: #fff;
+			padding: .5em 1.5em;
+			font-weight: 700;
+		}
+	}
+}
