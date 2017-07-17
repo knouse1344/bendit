@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :signed_in_user, only: [:index, :edit, :new, :update, :destroy]
 
   def index
     @articles = Article.all

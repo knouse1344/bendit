@@ -7,7 +7,7 @@ gem 'rails'
 gem 'bcrypt', '~> 3.1.2'
 
 # Use pg as the database for Active Record
-gem 'pg'
+gem 'pg', "0.20.0"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

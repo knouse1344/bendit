@@ -1,5 +1,5 @@
 class HandoutsController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :new, :update, :destroy]
+  before_action :signed_in_user, only: [:index, :edit, :new, :update, :destroy]
   
   def index
     @handouts = Handout.all.order(created_at: :desc)
