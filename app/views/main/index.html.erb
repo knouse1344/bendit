@@ -41,6 +41,12 @@
 	var img03 = "<%= @homepage.imagethree %>"
 	$(".imagethree").attr("src", img03)
 
+	<% if signed_in? %>
+		// $(".imageone").on("click", function() {
+		// 	$(".imageoneInput").click()
+		// })
+	<% end %>
+
 </script>
 
 <!-- 
